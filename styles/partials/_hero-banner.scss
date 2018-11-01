@@ -31,19 +31,23 @@
   }
 }
 
-.hero-banner__title {
-  @include unified-heading(8rem);
-  font-family: 'Lora', serif;
-  position: relative;
+.hero-banner__content {
+  display: flex;
+  justify-content: space-between;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: -200px;
-    left: 0;
-    height: 200px;
-    width: 200px;
-    background: url(../assets/circle-text.png) center / contain no-repeat;
+  &__title {
+    @include unified-heading(8rem);
+    font-family: 'Lora', serif;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -50px;
+      left: -50px;
+      height: 200px;
+      width: 200px;
+      background: url(../assets/circle-text.png) center / contain no-repeat;
+    }
   }
-
 }
