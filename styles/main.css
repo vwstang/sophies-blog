@@ -150,7 +150,7 @@ body {
 
 .wrapper--hero {
   padding-top: 10px;
-  background: #f6a823; }
+  background: url(../assets/home-image-1.jpg) center/cover no-repeat; }
 
 .hero-banner {
   display: -webkit-box;
@@ -179,14 +179,10 @@ body {
     .hero-banner__nav__link:hover {
       color: #f0efed; }
     .hero-banner__nav__link--master {
-      text-decoration: none;
-      color: #2c2c2c;
       margin: 0;
       text-transform: uppercase;
       font-size: 3rem;
       font-family: 'Lora', serif; }
-      .hero-banner__nav__link--master:hover {
-        color: #f0efed; }
 
 .hero-banner__content {
   display: -webkit-box;
@@ -194,7 +190,10 @@ body {
   display: flex;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  justify-content: space-between; }
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
   .hero-banner__content__title {
     margin: 0;
     text-transform: uppercase;
@@ -209,5 +208,14 @@ body {
       height: 200px;
       width: 200px;
       background: url(../assets/circle-text.png) center/contain no-repeat; }
+
+@media (min-width: 600px) {
+  .wrapper--hero {
+    background: #f6a823; }
+  .hero-banner__content__img {
+    display: block;
+    position: relative;
+    -webkit-box-shadow: 20px 20px #fff;
+    box-shadow: 20px 20px #fff; } }
 
 /*# sourceMappingURL=main.css.map */

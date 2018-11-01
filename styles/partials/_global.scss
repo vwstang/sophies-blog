@@ -1,4 +1,10 @@
-// Variables and Mixins
+//--Variables and Mixins--//
+
+// Media Query Sizes
+$tablet: 600px;
+$desktop: 968px;
+
+// Colors
 $clrBlack: #2c2c2c;
 $clrGrey: #4f4f4f;
 $clrDGBlue: #285e64;
@@ -7,6 +13,7 @@ $clrAccent: #05afc1;
 $clrRustRed: #a82706;
 $clrWhiteShade: #f0efed;
 
+// Mixins
 @mixin unified-heading($font-size) {
   margin: 0;
   text-transform: uppercase;
@@ -37,7 +44,7 @@ body {
   padding: 50px 5%;
 }
 
-@media (min-width: 968px) {
+@media (min-width: $desktop) {
   
   .wrapper {
     padding: 100px 10%;

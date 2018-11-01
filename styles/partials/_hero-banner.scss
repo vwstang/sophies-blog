@@ -1,7 +1,7 @@
 .wrapper--hero {
   @extend .wrapper;
   padding-top: 10px;
-  background: $clrOJYellow;
+  background: url(../assets/home-image-1.jpg) center / cover no-repeat;
 }
 
 .hero-banner {
@@ -23,7 +23,6 @@
       font-size: 2rem;
 
       &--master {
-        @include unified-links;
         @include unified-heading(3rem);
         font-family: 'Lora', serif;
       }
@@ -34,6 +33,7 @@
 .hero-banner__content {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   &__title {
     @include unified-heading(8rem);
@@ -50,4 +50,24 @@
       background: url(../assets/circle-text.png) center / contain no-repeat;
     }
   }
+
+  &__img {
+    
+  }
+}
+
+@media (min-width: $tablet) {
+  .wrapper--hero {
+    background: $clrOJYellow;
+  }
+
+  .hero-banner__content__img {
+    display: block;
+    position: relative;
+    box-shadow: 20px 20px #fff;
+  }
+}
+
+@media (min-width: $desktop) {
+
 }
