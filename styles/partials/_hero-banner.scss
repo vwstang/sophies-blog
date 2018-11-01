@@ -1,0 +1,49 @@
+.wrapper--hero {
+  @extend .wrapper;
+  padding-top: 10px;
+  background: $clrOJYellow;
+}
+
+.hero-banner {
+  
+  display: flex;
+  flex-direction: column;
+
+  &__nav {
+    &__list {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      list-style: none;
+      font-weight: bold;
+    }
+
+    &__link {
+      @include unified-links;
+      font-size: 2rem;
+
+      &--master {
+        @include unified-links;
+        @include unified-heading(3rem);
+        font-family: 'Lora', serif;
+      }
+    }
+  }
+}
+
+.hero-banner__title {
+  @include unified-heading(8rem);
+  font-family: 'Lora', serif;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -200px;
+    left: 0;
+    height: 200px;
+    width: 200px;
+    background: url(../assets/circle-text.png) center / contain no-repeat;
+  }
+
+}

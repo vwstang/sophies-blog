@@ -1,3 +1,4 @@
+// Variables and Mixins
 $clrBlack: #2c2c2c;
 $clrGrey: #4f4f4f;
 $clrDGBlue: #285e64;
@@ -5,3 +6,40 @@ $clrOJYellow: #f6a823;
 $clrAccent: #05afc1;
 $clrRustRed: #a82706;
 $clrWhiteShade: #f0efed;
+
+@mixin unified-heading($font-size) {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: $font-size;
+}
+
+@mixin unified-links() {
+  text-decoration: none;
+  color: $clrBlack;
+  &:hover {
+    color: $clrWhiteShade;
+  }
+}
+
+* {
+  font-size: 62.5%;
+}
+
+// html {
+  
+// }
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.wrapper {
+  padding: 50px 5%;
+}
+
+@media (min-width: 968px) {
+  
+  .wrapper {
+    padding: 100px 10%;
+  }
+}
