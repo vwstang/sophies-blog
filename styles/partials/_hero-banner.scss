@@ -1,19 +1,23 @@
 .wrapper--hero {
   @extend .wrapper;
-  padding-top: 10px;
+  height: 100vh;
+  padding-top: 20px;
   background: url(../assets/home-image-1.jpg) center / cover no-repeat;
 }
 
 .hero-banner {
-  
   display: flex;
   flex-direction: column;
 
   &__nav {
+    padding: 0 20%;
+
     &__list {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      margin: 0;
+      padding: 0;
       list-style: none;
       font-weight: bold;
     }
@@ -21,6 +25,11 @@
     &__link {
       @include unified-links;
       font-size: 2rem;
+      padding: 20px;
+
+      &--active {
+        color: $clrWhiteShade;
+      }
 
       &--master {
         @include unified-heading(3rem);
@@ -43,27 +52,37 @@
     &::before {
       content: "";
       position: absolute;
-      top: -50px;
+      top: -100px;
       left: -50px;
       height: 200px;
       width: 200px;
       background: url(../assets/circle-text.png) center / contain no-repeat;
+
+      // Tried to make the circle text rotate on hover, will tackle again later.
+      // &:hover {
+      //   transform: rotate(90deg);
+      //   transition: all 1s;
+      // }
     }
   }
 
   &__img {
-    
+    display: none;
   }
 }
 
 @media (min-width: $tablet) {
   .wrapper--hero {
+    height: auto;
+    padding-bottom: 0;
     background: $clrOJYellow;
   }
 
   .hero-banner__content__img {
     display: block;
     position: relative;
+    top: 100px;
+    right: 10px;
     box-shadow: 20px 20px #fff;
   }
 }

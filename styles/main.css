@@ -149,7 +149,8 @@ body {
     padding: 100px 10%; } }
 
 .wrapper--hero {
-  padding-top: 10px;
+  height: 100vh;
+  padding-top: 20px;
   background: url(../assets/home-image-1.jpg) center/cover no-repeat; }
 
 .hero-banner {
@@ -160,29 +161,36 @@ body {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column; }
-  .hero-banner__nav__list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    list-style: none;
-    font-weight: bold; }
-  .hero-banner__nav__link {
-    text-decoration: none;
-    color: #2c2c2c;
-    font-size: 2rem; }
-    .hero-banner__nav__link:hover {
-      color: #f0efed; }
-    .hero-banner__nav__link--master {
+  .hero-banner__nav {
+    padding: 0 20%; }
+    .hero-banner__nav__list {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
       margin: 0;
-      text-transform: uppercase;
-      font-size: 3rem;
-      font-family: 'Lora', serif; }
+      padding: 0;
+      list-style: none;
+      font-weight: bold; }
+    .hero-banner__nav__link {
+      text-decoration: none;
+      color: #2c2c2c;
+      font-size: 2rem;
+      padding: 20px; }
+      .hero-banner__nav__link:hover {
+        color: #f0efed; }
+      .hero-banner__nav__link--active {
+        color: #f0efed; }
+      .hero-banner__nav__link--master {
+        margin: 0;
+        text-transform: uppercase;
+        font-size: 3rem;
+        font-family: 'Lora', serif; }
 
 .hero-banner__content {
   display: -webkit-box;
@@ -203,18 +211,24 @@ body {
     .hero-banner__content__title::before {
       content: "";
       position: absolute;
-      top: -50px;
+      top: -100px;
       left: -50px;
       height: 200px;
       width: 200px;
       background: url(../assets/circle-text.png) center/contain no-repeat; }
+  .hero-banner__content__img {
+    display: none; }
 
 @media (min-width: 600px) {
   .wrapper--hero {
+    height: auto;
+    padding-bottom: 0;
     background: #f6a823; }
   .hero-banner__content__img {
     display: block;
     position: relative;
+    top: 100px;
+    right: 10px;
     -webkit-box-shadow: 20px 20px #fff;
     box-shadow: 20px 20px #fff; } }
 
