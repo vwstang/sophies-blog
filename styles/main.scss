@@ -5,3 +5,10 @@
 @import 'partials/blog-post';
 
 @import 'partials/gallery';
+
+.copyright {
+  background: $clrBlack;
+  color: $clrWhite;
+  text-align: center;
+  @include unified-body-text;
+}
