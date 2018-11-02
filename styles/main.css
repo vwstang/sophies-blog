@@ -142,7 +142,7 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: 1.8rem; }
 
-.wrapper, .wrapper--hero, .gallery-footer {
+.wrapper, .wrapper--hero, .gallery {
   padding: 50px 5%; }
 
 .btn {
@@ -166,7 +166,7 @@ body {
     color: #05afc1; }
 
 @media (min-width: 968px) {
-  .wrapper, .wrapper--hero, .gallery-footer {
+  .wrapper, .wrapper--hero, .gallery {
     padding: 100px 10%; } }
 
 .wrapper--hero {
@@ -293,14 +293,14 @@ body {
     .blog-post--text--right-down {
       background: #f6a823; } }
 
-.gallery-footer {
+.gallery {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between; }
-  .gallery-footer__img {
+  .gallery__img {
     height: 100%;
     width: 30%; }
 
