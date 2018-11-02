@@ -1,6 +1,6 @@
 .wrapper--hero {
   @extend .wrapper;
-  height: 100vh;
+  min-height: 100vh;
   padding-top: 20px;
   background: url(../assets/home-image-1.jpg) center / cover no-repeat;
 }

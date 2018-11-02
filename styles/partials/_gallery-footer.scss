@@ -1,0 +1,10 @@
+.gallery-footer {
+  @extend .wrapper;
+  display: flex;
+  justify-content: space-between;
+
+  &__img {
+    height: 100%;
+    width: 30%;
+  }
+}

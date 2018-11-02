@@ -33,6 +33,12 @@ $clrOJYellow: #f6a823;
   }
 }
 
+@mixin unified-body-text() {
+  line-height: 3.2rem;
+  font-size: 2rem;
+}
+
+
 * {
   font-size: 62.5%;
 }

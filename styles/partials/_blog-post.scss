@@ -1,0 +1,41 @@
+.blog-post {
+  &__container {
+    position: relative;
+
+    &__picture {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &__content {
+    
+  }
+}
+
+
+@media (min-width: $tablet) {
+  .blog-post {
+    display: flex;
+
+    &--img {
+      &--left-up {
+        background: $clrRustRed;
+      }
+      
+      &--right-down {
+        background: $clrOJYellow;
+      }
+    }
+
+    &--text {
+      &--left-up {
+        background: $clrRustRed;
+      }
+      
+      &--right-down {
+        background: $clrOJYellow;
+      }
+    }
+  }
+}

@@ -6,8 +6,7 @@
   }
 
   &__content {
-    line-height: 3.2rem;
-    font-size: 2rem;
+    @include unified-body-text;
   }
   
 }
