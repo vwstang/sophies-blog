@@ -5,26 +5,31 @@ $tablet: 600px;
 $desktop: 968px;
 
 // Colors
-$clrBlack: #2c2c2c;
+$clrWhite: #fff;
+$clrWhiteShade: #f0efed;
 $clrGrey: #4f4f4f;
+$clrBlack: #2c2c2c;
+$clrRustRed: #a82706;
+$clrAccent: #05afc1;
 $clrDGBlue: #285e64;
 $clrOJYellow: #f6a823;
-$clrAccent: #05afc1;
-$clrRustRed: #a82706;
-$clrWhiteShade: #f0efed;
 
 // Mixins
 @mixin unified-heading($font-size) {
   margin: 0;
-  text-transform: uppercase;
   font-size: $font-size;
+  letter-spacing: 1px;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 @mixin unified-links() {
   text-decoration: none;
+  text-transform: uppercase;
   color: $clrBlack;
   &:hover {
-    color: $clrWhiteShade;
+    color: $clrWhite;
+    transition: all 0.2s;
   }
 }
 
@@ -38,10 +43,27 @@ $clrWhiteShade: #f0efed;
 
 body {
   font-family: 'Roboto', sans-serif;
+  font-size: 1.8rem;
 }
 
 .wrapper {
   padding: 50px 5%;
+}
+
+.btn {
+  @include unified-links;
+  display: inline-block;
+  padding: 5px 25px;
+  background: $clrAccent;
+  line-height: 3.2rem;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  
+  &:hover {
+    background: $clrBlack;
+    color: $clrAccent;
+  }
 }
 
 @media (min-width: $desktop) {

@@ -28,11 +28,11 @@
       padding: 20px;
 
       &--active {
-        color: $clrWhiteShade;
+        color: $clrWhite;
       }
 
       &--master {
-        @include unified-heading(3rem);
+        @include unified-heading(4.8rem);
         font-family: 'Lora', serif;
       }
     }
