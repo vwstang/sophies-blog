@@ -10,7 +10,7 @@
     list-style: none;
     
     &__item {
-      margin-right: $marg-ding;
+      margin-right: $margding;
     }
 
     &__link { 
@@ -53,8 +53,8 @@
 
   &__input {
     height: 300px;
-    margin-bottom: $marg-ding;
-    padding: $marg-ding;
+    margin-bottom: $margding;
+    padding: $margding;
     vertical-align: top;
   }
 
@@ -64,11 +64,11 @@
     &__input {
       height: 2rem;
       width: 50%;
-      margin-bottom: $marg-ding;
-      padding: $marg-ding;
+      margin-bottom: $margding;
+      padding: $margding;
 
       &:first-child {
-        margin-right: $marg-ding;
+        margin-right: $margding;
       }
     }
   }

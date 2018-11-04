@@ -1,5 +1,6 @@
 // Variables for sub-pages
-$marg-ding: 20px;
+$margding: 40px;
+$top-bot-margding: $margding;
 
 .main-container {
   @extend .wrapper;
@@ -9,24 +10,28 @@ $marg-ding: 20px;
 }
 
 .sidebar {
-  flex-grow: 0;
-  margin-right: $marg-ding;
-  height: auto;
+  flex: 0 0 440px;
+  margin-right: $margding;
+  // height: auto;
   
   &__heading {
     @include unified-heading(2.4rem);
   }
 
   &__about {
-    margin-bottom: $marg-ding;
+    margin-bottom: $margding;
     background: $clrWhite;
-    padding: $marg-ding;
+    padding: $top-bot-margding $margding;
 
     &__img {
       width: 100%;
       height: 400px;
-      margin-bottom: $marg-ding;
+      margin-bottom: $margding;
       background: url(../assets/blog-image-2.jpg) center / cover no-repeat;
+    }
+
+    &__link {
+      // @include unified-links;
     }
 
     &__text {
@@ -36,7 +41,7 @@ $marg-ding: 20px;
 
   &__recent-posts {
     background: $clrWhite;
-    padding: $marg-ding;
+    padding: $top-bot-margding $margding;
 
     &__post-list {
       margin-bottom: 0;
@@ -61,5 +66,32 @@ $marg-ding: 20px;
         color: $clrOJYellow;
       }
     }
+  }
+}
+
+.blog-post {
+  flex-grow: 5;
+  margin-right: $margding;
+  background: $clrWhite;
+  border-bottom: 10px solid $clrOJYellow;
+  padding: $top-bot-margding $margding;
+
+  &__title {
+    @include unified-heading(3.2rem);
+  }
+
+  &__text:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.comment {
+  margin-bottom: $margding;
+  background: $clrWhite;
+  padding: $top-bot-margding $margding;
+  display: flex;
+
+  &__author {
+    
   }
 }

@@ -1,4 +1,4 @@
-.blog-post {
+.blog-snippet {
   &__container {
     position: relative;
 
@@ -15,7 +15,7 @@
 
 
 @media (min-width: $tablet) {
-  .blog-post {
+  .blog-snippet {
     display: flex;
 
     &--img {

@@ -270,24 +270,24 @@ body {
     font-weight: bold;
     text-transform: uppercase; }
 
-.blog-post__container {
+.blog-snippet__container {
   position: relative; }
-  .blog-post__container__picture {
+  .blog-snippet__container__picture {
     display: block;
     width: 100%; }
 
 @media (min-width: 600px) {
-  .blog-post {
+  .blog-snippet {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
-    .blog-post--img--left-up {
+    .blog-snippet--img--left-up {
       background: #a82706; }
-    .blog-post--img--right-down {
+    .blog-snippet--img--right-down {
       background: #f6a823; }
-    .blog-post--text--left-up {
+    .blog-snippet--text--left-up {
       background: #a82706; }
-    .blog-post--text--right-down {
+    .blog-snippet--text--right-down {
       background: #f6a823; } }
 
 .gallery {
@@ -312,10 +312,9 @@ body {
 
 .sidebar {
   -webkit-box-flex: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  margin-right: 20px;
-  height: auto; }
+  -ms-flex: 0 0 440px;
+  flex: 0 0 440px;
+  margin-right: 40px; }
   .sidebar__heading {
     margin: 0;
     font-size: 2.4rem;
@@ -323,19 +322,19 @@ body {
     font-weight: bold;
     text-transform: uppercase; }
   .sidebar__about, .sidebar__contact {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     background: #fff;
-    padding: 20px; }
+    padding: 40px 40px; }
     .sidebar__about__img {
       width: 100%;
       height: 400px;
-      margin-bottom: 20px;
+      margin-bottom: 40px;
       background: url(../assets/blog-image-2.jpg) center/cover no-repeat; }
     .sidebar__about__text {
       margin-bottom: 0; }
   .sidebar__recent-posts {
     background: #fff;
-    padding: 20px;
+    padding: 40px 40px;
     /* So have to make pseudo-elements to replace them - source: w3schools */ }
     .sidebar__recent-posts__post-list {
       margin-bottom: 0;
@@ -362,6 +361,31 @@ body {
       .sidebar__recent-posts__link:hover {
         color: #f6a823; }
 
+.blog-post {
+  -webkit-box-flex: 5;
+  -ms-flex-positive: 5;
+  flex-grow: 5;
+  margin-right: 40px;
+  background: #fff;
+  border-bottom: 10px solid #f6a823;
+  padding: 40px 40px; }
+  .blog-post__title {
+    margin: 0;
+    font-size: 3.2rem;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-transform: uppercase; }
+  .blog-post__text:last-child {
+    margin-bottom: 0; }
+
+.comment {
+  margin-bottom: 40px;
+  background: #fff;
+  padding: 40px 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
 .sidebar__social-media-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -370,7 +394,7 @@ body {
   padding: 0;
   list-style: none; }
   .sidebar__social-media-list__item {
-    margin-right: 20px; }
+    margin-right: 40px; }
   .sidebar__social-media-list__link {
     text-decoration: none;
     text-transform: uppercase;
@@ -418,8 +442,8 @@ body {
   flex-direction: column; }
   .contact-form__input {
     height: 300px;
-    margin-bottom: 20px;
-    padding: 20px;
+    margin-bottom: 40px;
+    padding: 40px;
     vertical-align: top; }
   .contact-form__info-container {
     display: -webkit-box;
@@ -428,10 +452,10 @@ body {
     .contact-form__info-container__input {
       height: 2rem;
       width: 50%;
-      margin-bottom: 20px;
-      padding: 20px; }
+      margin-bottom: 40px;
+      padding: 40px; }
       .contact-form__info-container__input:first-child {
-        margin-right: 20px; }
+        margin-right: 40px; }
   .contact-form__submit {
     display: block;
     border: 0; }
