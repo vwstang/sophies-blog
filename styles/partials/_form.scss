@@ -4,11 +4,17 @@
   flex-direction: column;
 
   &__input {
+    position: relative;
     height: 300px;
     margin-bottom: $margding;
     border: 0;
     padding: $margding;
-    vertical-align: top;
+
+    &::placeholder {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
   }
 
   &__container {

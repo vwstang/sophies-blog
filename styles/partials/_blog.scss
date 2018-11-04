@@ -117,11 +117,7 @@
     margin-bottom: 0;
   }
 
-  //&--last-comment {
-  //   border-bottom: 10px solid $clrOJYellow;
-  // }
-}
-
-.main-content article.comment:last-child {
-  border-bottom: 10px solid $clrOJYellow;
+  &--last {
+    border-bottom: 10px solid $clrOJYellow;
+  }
 }
