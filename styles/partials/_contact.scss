@@ -1,16 +1,7 @@
-.main-container {
-  @extend .wrapper;
-  display: flex;
-  align-items: flex-start;
-  background: $clrWhiteShade;
-}
-
 .sidebar {
-  flex-grow: 0;
-  margin-right: 20px;
-  height: auto;
-  padding: 20px;
-  background: $clrWhite;
+  &__contact {
+    @extend .sidebar__about;
+  }
 
   &__social-media-list {
     display: flex;
@@ -19,7 +10,7 @@
     list-style: none;
     
     &__item {
-      margin-right: 20px;
+      margin-right: $marg-ding;
     }
 
     &__link { 
@@ -62,8 +53,8 @@
 
   &__input {
     height: 300px;
-    margin-bottom: 20px;
-    padding: 20px;
+    margin-bottom: $marg-ding;
+    padding: $marg-ding;
     vertical-align: top;
   }
 
@@ -73,11 +64,11 @@
     &__input {
       height: 2rem;
       width: 50%;
-      margin-bottom: 20px;
-      padding: 20px;
+      margin-bottom: $marg-ding;
+      padding: $marg-ding;
 
       &:first-child {
-        margin-right: 20px;
+        margin-right: $marg-ding;
       }
     }
   }

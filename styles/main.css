@@ -315,50 +315,95 @@ body {
   -ms-flex-positive: 0;
   flex-grow: 0;
   margin-right: 20px;
-  height: auto;
-  padding: 20px;
-  background: #fff; }
-  .sidebar__social-media-list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+  height: auto; }
+  .sidebar__heading {
     margin: 0;
-    padding: 0;
-    list-style: none; }
-    .sidebar__social-media-list__item {
-      margin-right: 20px; }
-    .sidebar__social-media-list__link {
+    font-size: 2.4rem;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-transform: uppercase; }
+  .sidebar__about, .sidebar__contact {
+    margin-bottom: 20px;
+    background: #fff;
+    padding: 20px; }
+    .sidebar__about__img {
+      width: 100%;
+      height: 400px;
+      margin-bottom: 20px;
+      background: url(../assets/blog-image-2.jpg) center/cover no-repeat; }
+    .sidebar__about__text {
+      margin-bottom: 0; }
+  .sidebar__recent-posts {
+    background: #fff;
+    padding: 20px;
+    /* So have to make pseudo-elements to replace them - source: w3schools */ }
+    .sidebar__recent-posts__post-list {
+      margin-bottom: 0;
+      padding-left: 1.5rem;
+      list-style: none;
+      /* Turns out CSS can't target the styles of the default bullets */ }
+    .sidebar__recent-posts__list-item::before {
+      content: "\2022";
+      /* Unicode for a bullet */
+      display: inline-block;
+      width: 1.5rem;
+      color: #f6a823; }
+    .sidebar__recent-posts__link {
       text-decoration: none;
       text-transform: uppercase;
       color: #2c2c2c;
-      color: #f6a823; }
-      .sidebar__social-media-list__link:hover {
+      color: #2c2c2c;
+      text-transform: none; }
+      .sidebar__recent-posts__link:hover {
         color: #fff;
         -webkit-transition: all 0.2s;
         -o-transition: all 0.2s;
         transition: all 0.2s; }
-      .sidebar__social-media-list__link:hover {
-        color: #2c2c2c; }
-  .sidebar__contact-info {
-    margin: 0;
-    padding: 0;
-    list-style: none; }
-    .sidebar__contact-info__heavy-item {
-      margin: 10px 0;
-      font-weight: bold; }
-    .sidebar__contact-info__link {
-      text-decoration: none;
-      text-transform: uppercase;
-      color: #2c2c2c; }
-      .sidebar__contact-info__link:hover {
-        color: #fff;
-        -webkit-transition: all 0.2s;
-        -o-transition: all 0.2s;
-        transition: all 0.2s; }
-      .sidebar__contact-info__link:hover {
+      .sidebar__recent-posts__link:hover {
         color: #f6a823; }
-    .sidebar__contact-info__address {
-      font-style: normal; }
+
+.sidebar__social-media-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  .sidebar__social-media-list__item {
+    margin-right: 20px; }
+  .sidebar__social-media-list__link {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #2c2c2c;
+    color: #f6a823; }
+    .sidebar__social-media-list__link:hover {
+      color: #fff;
+      -webkit-transition: all 0.2s;
+      -o-transition: all 0.2s;
+      transition: all 0.2s; }
+    .sidebar__social-media-list__link:hover {
+      color: #2c2c2c; }
+
+.sidebar__contact-info {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  .sidebar__contact-info__heavy-item {
+    margin: 10px 0;
+    font-weight: bold; }
+  .sidebar__contact-info__link {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #2c2c2c; }
+    .sidebar__contact-info__link:hover {
+      color: #fff;
+      -webkit-transition: all 0.2s;
+      -o-transition: all 0.2s;
+      transition: all 0.2s; }
+    .sidebar__contact-info__link:hover {
+      color: #f6a823; }
+  .sidebar__contact-info__address {
+    font-style: normal; }
 
 .contact-form {
   -webkit-box-flex: 1;

@@ -1,0 +1,65 @@
+// Variables for sub-pages
+$marg-ding: 20px;
+
+.main-container {
+  @extend .wrapper;
+  display: flex;
+  align-items: flex-start;
+  background: $clrWhiteShade;
+}
+
+.sidebar {
+  flex-grow: 0;
+  margin-right: $marg-ding;
+  height: auto;
+  
+  &__heading {
+    @include unified-heading(2.4rem);
+  }
+
+  &__about {
+    margin-bottom: $marg-ding;
+    background: $clrWhite;
+    padding: $marg-ding;
+
+    &__img {
+      width: 100%;
+      height: 400px;
+      margin-bottom: $marg-ding;
+      background: url(../assets/blog-image-2.jpg) center / cover no-repeat;
+    }
+
+    &__text {
+      margin-bottom: 0;
+    }
+  }
+
+  &__recent-posts {
+    background: $clrWhite;
+    padding: $marg-ding;
+
+    &__post-list {
+      margin-bottom: 0;
+      padding-left: 1.5rem;
+      list-style: none; /* Turns out CSS can't target the styles of the default bullets */
+    }
+
+    /* So have to make pseudo-elements to replace them - source: w3schools */
+    &__list-item::before {
+      content: "\2022"; /* Unicode for a bullet */
+      display: inline-block;
+      width: 1.5rem;
+      color: $clrOJYellow;
+    }
+
+    &__link {
+      @include unified-links;
+      color: $clrBlack;
+      text-transform: none;
+      
+      &:hover {
+        color: $clrOJYellow;
+      }
+    }
+  }
+}
