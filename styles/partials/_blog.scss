@@ -1,7 +1,3 @@
-// Variables for sub-pages
-$margding: 40px;
-$top-bot-margding: $margding;
-
 .main-container {
   @extend .wrapper;
   display: flex;
@@ -121,7 +117,11 @@ $top-bot-margding: $margding;
     margin-bottom: 0;
   }
 
-  &:last-child {
-    border-bottom: 10px solid $clrOJYellow;
-  }
+  //&--last-comment {
+  //   border-bottom: 10px solid $clrOJYellow;
+  // }
+}
+
+.main-content article.comment:last-child {
+  border-bottom: 10px solid $clrOJYellow;
 }

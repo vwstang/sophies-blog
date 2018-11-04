@@ -82,16 +82,27 @@
           <p class="comment__text">Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcorper metus. Sed sollicitudin ipsum quis nunc sollicitudin ultrices. Donec euismod scelerisque ligula. Maecenas eu varius risus, eu aliquet arcu.</p>
         </div>
       </article>
-      <article class="comment">
-          <img class="comment__avatar" src="./assets/blog-image-4.jpg" alt="Julia's Avatar">
-          <div class="comment__container">
-            <h4 class="comment__author">
-              <a class="comment__author__link" href="./index.html">Wednesday October 10th, 2018 by Julia</a>
-            </h4>
-            <p class="comment__text">Donec viverra eleifend lacus, vitae ullamcorper metus. Sed sollicitudin ipsum quis nunc sollicitudin ultrices. Donec euismod scelerisque ligula. Maecenas eu varius risus, eu aliquet arcu.</p>
-          </div>
-        </article>
+      <article class="comment comment--last-comment">
+        <img class="comment__avatar" src="./assets/blog-image-4.jpg" alt="Julia's Avatar">
+        <div class="comment__container">
+          <h4 class="comment__author">
+            <a class="comment__author__link" href="./index.html">Wednesday October 10th, 2018 by Julia</a>
+          </h4>
+          <p class="comment__text">Donec viverra eleifend lacus, vitae ullamcorper metus. Sed sollicitudin ipsum quis nunc sollicitudin ultrices. Donec euismod scelerisque ligula. Maecenas eu varius risus, eu aliquet arcu.</p>
+        </div>
+      </article>
+      <form class="form form--not-first" action="">
+        <div class="form__container">
+          <input class="form__container__input" type="text" placeholder="Name">
+          <input class="form__container__input" type="text" placeholder="Email address">
+        </div>
+        <input class="form__input" type="text" placeholder="Comment">
+        <button class="form__submit" type="submit">Post Comment</button>
+      </form>
     </section> <!-- /.main-content -->
   </main> <!-- /.main-container -->
+  <footer class="copyright">
+    <span>Copyright &copy; 2018 HackerYou</span>
+  </footer>
 </body>
 </html>

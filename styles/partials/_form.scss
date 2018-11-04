@@ -1,0 +1,39 @@
+.form {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+
+  &__input {
+    height: 300px;
+    margin-bottom: $margding;
+    border: 0;
+    padding: $margding;
+    vertical-align: top;
+  }
+
+  &__container {
+    display: flex;
+
+    &__input {
+      height: 2rem;
+      width: 50%;
+      margin-bottom: $margding;
+      border: 0;
+      padding: $margding;
+
+      &:first-child {
+        margin-right: $margding;
+      }
+    }
+  }
+
+  &__submit {
+    @extend .btn;
+    display: block;
+    border: 0;
+  }
+
+  &--not-first {
+    margin-top: $margding;
+  }
+}
