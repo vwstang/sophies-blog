@@ -4,11 +4,6 @@
   &__subtitle {
     @include unified-heading(4.2rem);
   }
-
-  &__content {
-    @include unified-body-text;
-  }
-  
 }
 
 @media (min-width: $tablet) {

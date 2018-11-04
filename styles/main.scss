@@ -6,9 +6,12 @@
 
 @import 'partials/gallery';
 
+// Contact Page Styles
+@import 'partials/contact';
+
+
 .copyright {
   background: $clrBlack;
   color: $clrWhite;
   text-align: center;
-  @include unified-body-text;
 }

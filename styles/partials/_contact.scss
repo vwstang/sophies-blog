@@ -1,0 +1,72 @@
+.main-container {
+  @extend .wrapper;
+  display: flex;
+  background: $clrWhiteShade;
+}
+
+.sidebar {
+  flex-grow: 1; // To change to flex short-hand
+  padding: 20px;
+  background: $clrWhite;
+  border: 1px solid tomato;
+
+  &__social-media-list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    
+    &__item {
+      margin-right: 20px;
+    }
+
+    &__link { 
+      @include unified-links;
+      color: $clrOJYellow;
+      
+      &:hover {
+        color: $clrBlack;
+      }
+    }
+  }
+
+  &__contact-info {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    &__heavy-item {
+      margin: 10px 0;
+      font-weight: bold;
+    }
+
+    &__link {
+      @include unified-links;
+      &:hover {
+        color: $clrOJYellow;
+      }
+    }
+
+    &__address {
+      font-style: normal;
+    }
+  }
+}
+
+.contact-form {
+  flex-grow: 5;
+  display: flex;
+  background: $clrWhite;
+  border: 1px solid tomato;
+
+  &__input {
+    height: 6rem;
+    width: 50%;
+    flex-wrap: wrap;
+    // line-height: 3rem;
+
+    &--messagebox {
+
+    }
+  }
+}
