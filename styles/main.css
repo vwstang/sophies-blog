@@ -146,7 +146,7 @@ body {
 .wrapper, .wrapper--hero, .gallery, .main-container {
   padding: 50px 5%; }
 
-.btn {
+.btn, .contact-form__submit {
   text-decoration: none;
   text-transform: uppercase;
   color: #2c2c2c;
@@ -156,12 +156,12 @@ body {
   line-height: 3.2rem;
   letter-spacing: 1px;
   text-transform: uppercase; }
-  .btn:hover {
+  .btn:hover, .contact-form__submit:hover {
     color: #fff;
     -webkit-transition: all 0.2s;
     -o-transition: all 0.2s;
     transition: all 0.2s; }
-  .btn:hover {
+  .btn:hover, .contact-form__submit:hover {
     background: #2c2c2c;
     color: #05afc1; }
 
@@ -305,15 +305,19 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   background: #f0efed; }
 
 .sidebar {
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
+  -webkit-box-flex: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  margin-right: 20px;
+  height: auto;
   padding: 20px;
-  background: #fff;
-  border: 1px solid tomato; }
+  background: #fff; }
   .sidebar__social-media-list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -357,23 +361,40 @@ body {
       font-style: normal; }
 
 .contact-form {
-  -webkit-box-flex: 5;
-  -ms-flex-positive: 5;
-  flex-grow: 5;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: #fff;
-  border: 1px solid tomato; }
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
   .contact-form__input {
-    height: 6rem;
-    width: 50%;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap; }
+    height: 300px;
+    margin-bottom: 20px;
+    padding: 20px;
+    vertical-align: top; }
+  .contact-form__info-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .contact-form__info-container__input {
+      height: 2rem;
+      width: 50%;
+      margin-bottom: 20px;
+      padding: 20px; }
+      .contact-form__info-container__input:first-child {
+        margin-right: 20px; }
+  .contact-form__submit {
+    display: block;
+    border: 0; }
 
 .copyright {
   background: #2c2c2c;
   color: #fff;
+  line-height: 4rem;
   text-align: center; }
 
 /*# sourceMappingURL=main.css.map */
