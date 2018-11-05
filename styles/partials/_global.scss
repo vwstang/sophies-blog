@@ -1,8 +1,8 @@
 //--Variables and Mixins--//
 
 // Media Query Sizes
-$tablet: 600px;
-$desktop: 968px;
+$tablet: 968px;
+$desktop: 1080px;
 
 // Margins and Padding
 $TB-pgpad-mobile: 50px;
@@ -18,6 +18,7 @@ $clrWhite: #fff;
 $clrWhiteShade: #f0efed;
 $clrGrey: #4f4f4f;
 $clrBlack: #2c2c2c;
+$clrTrueBlack: #000;
 $clrRustRed: #a82706;
 $clrAccent: #05afc1;
 $clrDGBlue: #285e64;
@@ -35,7 +36,7 @@ $clrOJYellow: #f6a823;
 @mixin unified-links() {
   text-decoration: none;
   text-transform: uppercase;
-  color: $clrBlack;
+  color: $clrTrueBlack;
   transition: all 0.2s;
   &:hover {
     color: $clrWhite;
@@ -61,11 +62,14 @@ body {
 
 .btn {
   @include unified-links;
-  display: inline-block;
+  display: block;
+  margin: 0 auto;
+  width: 220px;
   padding: 5px 25px;
   background: $clrAccent;
   line-height: 3.2rem;
   letter-spacing: 1px;
+  text-align: center;
   text-transform: uppercase;
   transition: all 0.2s;
   

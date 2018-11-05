@@ -9,7 +9,9 @@
   }
 
   &__content {
-    
+    &__subtitle {
+      @include unified-heading(3.2rem);
+    }
   }
 }
 
