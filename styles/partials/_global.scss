@@ -44,6 +44,13 @@ $clrOJYellow: #f6a823;
   }
 }
 
+@mixin right-down() {
+  /* test */
+}
+
+@mixin left-up() {
+  /* test */
+}
 
 
 html {
@@ -63,7 +70,6 @@ body {
 .btn {
   @include unified-links;
   display: block;
-  margin: 0 auto;
   width: 220px;
   padding: 5px 25px;
   background: $clrAccent;
