@@ -1,16 +1,13 @@
 .about {
   background: $clrWhiteShade;
 
-  &--with-image {
-    display: flex;
-    align-items: flex-start;
-  }
+
 
   &__img {
     position: relative;
     bottom: 10px;
     right: 10px;
-    margin-right: $margding;
+    margin: 0 auto;
     box-shadow: 20px 20px $clrOJYellow;
   }
 
@@ -22,11 +19,25 @@
 
   &__subtitle {
     @include unified-heading(4.2rem);
+    margin-top: 20px;
   }
 }
 
 @media (min-width: $tablet) {
+  .about {
+    &--with-image {
+      display: flex;
+      align-items: flex-start;
+    }
+  
+    &__img {
+      margin-right: $margding;
+    }
 
+    &__subtitle {
+      margin-top: 0;
+    }
+  }
 }
 
 @media (min-width: $desktop) {

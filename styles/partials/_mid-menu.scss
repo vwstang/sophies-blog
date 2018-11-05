@@ -35,10 +35,27 @@
         background: $clrBlack;
         color: $clrOJYellow;
 
-        &> .mid-menu__list__bullet {
+        & > .mid-menu__list__bullet {
           transition: all 0.2s;
           background: $clrBlack;
           color: $clrOJYellow;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $tablet) {
+  .mid-menu {
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+
+      &__item {
+        width: calc(50% - 20px);
+
+        &:nth-child(2n + 1) {
+          margin-right: 40px;
         }
       }
     }
