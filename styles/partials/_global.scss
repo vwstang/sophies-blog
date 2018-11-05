@@ -4,7 +4,12 @@
 $tablet: 600px;
 $desktop: 968px;
 
-// Variables for sub-pages
+// Margins and Padding
+$TB-pgpad-mobile: 50px;
+$LR-pgpad-mobile: 5%;
+$TB-pgpad-desktop: 100px;
+$LR-pgpad-desktop: 10%;
+
 $margding: 40px;
 $top-bot-margding: $margding;
 
@@ -62,6 +67,7 @@ body {
   line-height: 3.2rem;
   letter-spacing: 1px;
   text-transform: uppercase;
+  transition: all 0.2s;
   
   &:hover {
     background: $clrBlack;
@@ -72,6 +78,6 @@ body {
 @media (min-width: $desktop) {
   
   .wrapper {
-    padding: 100px 10%;
+    padding: $TB-pgpad-desktop $LR-pgpad-desktop;
   }
 }

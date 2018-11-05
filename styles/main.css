@@ -158,7 +158,8 @@ body {
   background: #05afc1;
   line-height: 3.2rem;
   letter-spacing: 1px;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  transition: all 0.2s; }
   .btn:hover, .form__submit:hover {
     color: #fff;
     -webkit-transition: all 0.2s;
@@ -173,7 +174,6 @@ body {
     padding: 100px 10%; } }
 
 .wrapper--hero {
-  min-height: 100vh;
   padding-top: 20px;
   background: url(../assets/home-image-1.jpg) center/cover no-repeat; }
 
@@ -184,46 +184,60 @@ body {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
-  flex-direction: column; }
-  .hero-banner__nav {
-    padding: 0 auto; }
-    .hero-banner__nav__list {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-      justify-content: space-between;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      margin: 0;
-      padding: 0;
-      list-style: none;
-      font-weight: bold; }
-    .hero-banner__nav__link {
-      text-decoration: none;
-      text-transform: uppercase;
-      color: #2c2c2c;
+  flex-direction: column;
+  position: relative; }
+  .hero-banner__nav__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-weight: bold; }
+  .hero-banner__nav__link {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #2c2c2c;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+    font-size: 2rem;
+    padding: 20px; }
+    .hero-banner__nav__link:hover {
+      color: #fff;
       -webkit-transition: all 0.2s;
       -o-transition: all 0.2s;
-      transition: all 0.2s;
-      font-size: 2rem;
-      padding: 20px; }
-      .hero-banner__nav__link:hover {
-        color: #fff;
-        -webkit-transition: all 0.2s;
-        -o-transition: all 0.2s;
-        transition: all 0.2s; }
-      .hero-banner__nav__link--active {
-        color: #fff; }
-      .hero-banner__nav__link--master {
-        margin: 0;
-        font-size: 4.8rem;
-        letter-spacing: 1px;
-        font-weight: bold;
-        text-transform: uppercase;
-        font-family: 'Lora', serif; }
+      transition: all 0.2s; }
+    .hero-banner__nav__link--active {
+      color: #fff; }
+    .hero-banner__nav__link--master {
+      margin: 0;
+      font-size: 4.8rem;
+      letter-spacing: 1px;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-family: 'Lora', serif; }
+  .hero-banner__banner-img {
+    height: 50vh;
+    min-height: 300px;
+    background: url(../assets/blog-image-1.jpg) center/cover no-repeat; }
+  .hero-banner__banner-title {
+    margin: 0;
+    font-size: 8rem;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: -40px;
+    padding-left: 5%;
+    line-height: 9.2rem;
+    font-family: 'Lora', serif; }
 
 .hero-banner__content {
   display: -webkit-box;
@@ -234,29 +248,25 @@ body {
   justify-content: space-between;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center; }
+  align-items: center;
+  position: relative; }
+  .hero-banner__content__circle-text {
+    position: absolute;
+    top: calc(50% - 130px);
+    left: -70px; }
   .hero-banner__content__title {
     margin: 0;
-    font-size: 8rem;
+    font-size: 14rem;
     letter-spacing: 1px;
     font-weight: bold;
     text-transform: uppercase;
     font-family: 'Lora', serif;
     position: relative; }
-    .hero-banner__content__title::before {
-      content: "";
-      position: absolute;
-      top: -100px;
-      left: -50px;
-      height: 200px;
-      width: 200px;
-      background: url(../assets/circle-text.png) center/contain no-repeat; }
   .hero-banner__content__img {
     display: none; }
 
 @media (min-width: 600px) {
   .wrapper--hero {
-    height: auto;
     padding-bottom: 0;
     background: #f6a823; }
   .hero-banner__content__img {
@@ -265,7 +275,9 @@ body {
     top: 100px;
     right: 10px;
     -webkit-box-shadow: 20px 20px #fff;
-    box-shadow: 20px 20px #fff; } }
+    box-shadow: 20px 20px #fff; }
+  .hero-banner__banner-title {
+    padding-left: 10%; } }
 
 .about {
   background: #f0efed; }

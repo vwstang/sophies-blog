@@ -1,6 +1,5 @@
 .wrapper--hero {
   @extend .wrapper;
-  min-height: 100vh;
   padding-top: 20px;
   background: url(../assets/home-image-1.jpg) center / cover no-repeat;
 }
@@ -8,9 +7,10 @@
 .hero-banner {
   display: flex;
   flex-direction: column;
+  position: relative;
+  // min-height: 100vh;
 
   &__nav {
-    padding: 0 auto;
 
     &__list {
       display: flex;
@@ -37,33 +37,55 @@
       }
     }
   }
+
+  &__banner-img {
+    height: 50vh;
+    min-height: 300px;
+    background: url(../assets/blog-image-1.jpg) center / cover no-repeat;
+  }
+
+  &__banner-title {
+    @include unified-heading(8rem);
+    position: absolute;
+    bottom: -40px;
+    padding-left: $LR-pgpad-mobile;
+    line-height: 9.2rem;
+    font-family: 'Lora', serif;
+  }
 }
 
 .hero-banner__content {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+
+  &__circle-text {
+    position: absolute;
+    top: calc(50% - 130px);
+    left: -70px;
+  }
 
   &__title {
-    @include unified-heading(8rem);
+    @include unified-heading(14rem);
     font-family: 'Lora', serif;
     position: relative;
 
-    &::before {
-      content: "";
-      position: absolute;
-      top: -100px;
-      left: -50px;
-      height: 200px;
-      width: 200px;
-      background: url(../assets/circle-text.png) center / contain no-repeat;
+    // Pseudo-element version of circle-text, replaced by img tag so screen readers can read the text.
+    // &::before {
+    //   content: "";
+    //   position: absolute;
+    //   top: -100px;
+    //   left: -50px;
+    //   height: 200px;
+    //   width: 200px;
+    //   background: url(../assets/circle-text.png) center / contain no-repeat;
 
       // Tried to make the circle text rotate on hover, will tackle again later.
       // &:hover {
       //   transform: rotate(90deg);
       //   transition: all 1s;
       // }
-    }
   }
 
   &__img {
@@ -73,17 +95,24 @@
 
 @media (min-width: $tablet) {
   .wrapper--hero {
-    height: auto;
     padding-bottom: 0;
     background: $clrOJYellow;
   }
 
-  .hero-banner__content__img {
-    display: block;
-    position: relative;
-    top: 100px;
-    right: 10px;
-    box-shadow: 20px 20px #fff;
+  .hero-banner {
+    // min-height: 80vh;
+
+    &__content__img {
+      display: block;
+      position: relative;
+      top: 100px;
+      right: 10px;
+      box-shadow: 20px 20px #fff;
+    }
+
+    &__banner-title {
+      padding-left: $LR-pgpad-desktop;
+    }
   }
 }
 
