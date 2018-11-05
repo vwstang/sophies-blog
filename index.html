@@ -6,6 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>It's All About Sophie</title>
   <link href="https://fonts.googleapis.com/css?family=Lora|Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+    crossorigin="anonymous">
   <link rel="stylesheet" href="./styles/main.css">
 </head>
 <body>
@@ -68,24 +70,36 @@
       <a class="btn" href="#">Read more</a>
     </div>
   </article>
-  <section>
-    <ul>
-      <li>
-        <a href=""><h2>Photos</h2></a>
+  <section class="mid-menu">
+    <ul class="mid-menu__list">
+      <li class="mid-menu__list__item">
+        <a class="mid-menu__list__link" href="#gallery">
+          <i class="fas fa-image mid-menu__list__bullet"></i>
+          <h2>Photos</h2>
+        </a>
         <p>Ut felis eros, vehicula eu magna nec, laoreet blandit nisi. Fusce auctor erat ac sagittis mattis. Mauris tempus velit sem, sit amet imperdiet dolor placerat et.</p>
       </li>
-      <li>
-        <a href=""><h2>About</h2></a>
+      <li class="mid-menu__list__item">
+        <a class="mid-menu__list__link" href="#about">
+          <i class="fas fa-user mid-menu__list__bullet"></i>
+          <h2>About</h2>
+        </a>
         <p>Ut felis eros, vehicula eu magna nec, laoreet blandit nisi. Fusce auctor erat ac sagittis mattis. Mauris tempus velit
         sem, sit amet imperdiet dolor placerat et.</p>
       </li>
-      <li>
-        <a href=""><h2>Blog</h2></a>
+      <li class="mid-menu__list__item">
+        <a class="mid-menu__list__link" href="./blog.html">
+          <i class="fas fa-tv mid-menu__list__bullet"></i>
+          <h2>Blog</h2>
+        </a>
         <p>Ut felis eros, vehicula eu magna nec, laoreet blandit nisi. Fusce auctor erat ac sagittis mattis. Mauris tempus velit
         sem, sit amet imperdiet dolor placerat et.</p>
       </li>
-      <li>
-        <a href=""><h2>Get In Touch</h2></a>
+      <li class="mid-menu__list__item">
+        <a class="mid-menu__list__link" href="./contact.html">
+          <i class="fas fa-phone mid-menu__list__bullet"></i>
+          <h2>Get In Touch</h2>
+        </a>
         <p>Ut felis eros, vehicula eu magna nec, laoreet blandit nisi. Fusce auctor erat ac sagittis mattis. Mauris tempus velit
         sem, sit amet imperdiet dolor placerat et.</p>
       </li>
@@ -98,7 +112,7 @@
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pulvinar tortor nulla elementum eleifend. Vestibulum consequat vestibulum felis pharetra luctus. Quisque interdum orci quis convallis dapibus nulla pulvinar tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pulvinar tortor nulla elementum eleifend. Vestibulum consequat vestibulum felis pharetra luctus. Quisque interdum orci quis convallis.</p>
     <a class="btn" href="#">Find out more</a>
   </article>
-  <section class="gallery">
+  <section class="gallery" id="gallery">
     <img class="gallery__img" src="./assets/home-image-6.jpg" alt="Gallery Sample - Bike and Orange Wall">
     <img class="gallery__img" src="./assets/home-image-7.jpg" alt="Gallery Sample - Building Arch">
     <img class="gallery__img" src="./assets/home-image-8.jpg" alt="Gallery Sample - Banana Beach Umbrella">

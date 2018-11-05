@@ -143,13 +143,16 @@ body {
   line-height: 3.2rem;
   font-size: 2rem; }
 
-.wrapper, .wrapper--hero, .gallery, .main-container {
+.wrapper, .wrapper--hero, .mid-menu, .gallery, .main-container {
   padding: 50px 5%; }
 
 .btn, .form__submit {
   text-decoration: none;
   text-transform: uppercase;
   color: #2c2c2c;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
   display: inline-block;
   padding: 5px 25px;
   background: #05afc1;
@@ -166,7 +169,7 @@ body {
     color: #05afc1; }
 
 @media (min-width: 968px) {
-  .wrapper, .wrapper--hero, .gallery, .main-container {
+  .wrapper, .wrapper--hero, .mid-menu, .gallery, .main-container {
     padding: 100px 10%; } }
 
 .wrapper--hero {
@@ -202,6 +205,9 @@ body {
       text-decoration: none;
       text-transform: uppercase;
       color: #2c2c2c;
+      -webkit-transition: all 0.2s;
+      -o-transition: all 0.2s;
+      transition: all 0.2s;
       font-size: 2rem;
       padding: 20px; }
       .hero-banner__nav__link:hover {
@@ -289,6 +295,46 @@ body {
       background: #a82706; }
     .blog-snippet--text--right-down {
       background: #f6a823; } }
+
+.mid-menu {
+  background: #f0efed; }
+  .mid-menu__list {
+    list-style: none; }
+    .mid-menu__list__item {
+      position: relative; }
+    .mid-menu__list__bullet {
+      position: absolute;
+      top: -0.5rem;
+      left: -6rem;
+      line-height: 4rem;
+      width: 4rem;
+      background: #f6a823;
+      border-radius: 50%;
+      text-align: center; }
+    .mid-menu__list__link {
+      text-decoration: none;
+      text-transform: uppercase;
+      color: #2c2c2c;
+      -webkit-transition: all 0.2s;
+      -o-transition: all 0.2s;
+      transition: all 0.2s; }
+      .mid-menu__list__link:hover {
+        color: #fff;
+        -webkit-transition: all 0.2s;
+        -o-transition: all 0.2s;
+        transition: all 0.2s; }
+      .mid-menu__list__link:hover {
+        -webkit-transition: all 0.2s;
+        -o-transition: all 0.2s;
+        transition: all 0.2s;
+        background: #2c2c2c;
+        color: #f6a823; }
+        .mid-menu__list__link:hover > .mid-menu__list__bullet {
+          -webkit-transition: all 0.2s;
+          -o-transition: all 0.2s;
+          transition: all 0.2s;
+          background: #2c2c2c;
+          color: #f6a823; }
 
 .gallery {
   display: -webkit-box;
@@ -402,6 +448,9 @@ body {
       text-decoration: none;
       text-transform: uppercase;
       color: #2c2c2c;
+      -webkit-transition: all 0.2s;
+      -o-transition: all 0.2s;
+      transition: all 0.2s;
       color: #2c2c2c;
       text-transform: none; }
       .sidebar__recent-posts__link:hover {
@@ -439,7 +488,10 @@ body {
     .blog-post__post-info__author, .comment__author__link {
       text-decoration: none;
       text-transform: uppercase;
-      color: #2c2c2c; }
+      color: #2c2c2c;
+      -webkit-transition: all 0.2s;
+      -o-transition: all 0.2s;
+      transition: all 0.2s; }
       .blog-post__post-info__author:hover, .comment__author__link:hover {
         color: #fff;
         -webkit-transition: all 0.2s;
@@ -480,6 +532,9 @@ body {
     text-decoration: none;
     text-transform: uppercase;
     color: #2c2c2c;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
     color: #f6a823; }
     .sidebar__social-media-list__link:hover {
       color: #fff;
@@ -499,7 +554,10 @@ body {
   .sidebar__contact-info__link {
     text-decoration: none;
     text-transform: uppercase;
-    color: #2c2c2c; }
+    color: #2c2c2c;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s; }
     .sidebar__contact-info__link:hover {
       color: #fff;
       -webkit-transition: all 0.2s;
@@ -510,10 +568,23 @@ body {
   .sidebar__contact-info__address {
     font-style: normal; }
 
+.bgdivider-chairs {
+  height: 200px;
+  width: auto;
+  background: url(../assets/home-image-4.jpg) center/cover no-repeat; }
+
 .copyright {
   background: #2c2c2c;
   color: #fff;
   line-height: 4rem;
   text-align: center; }
+
+@media (min-width: 600px) {
+  .bgdivider-chairs {
+    height: 300px; } }
+
+@media (min-width: 968px) {
+  .bgdivider-chairs {
+    height: 400px; } }
 
 /*# sourceMappingURL=main.css.map */

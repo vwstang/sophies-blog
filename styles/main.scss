@@ -3,7 +3,7 @@
 @import 'partials/hero-banner';
 @import 'partials/about';
 @import 'partials/blog-post';
-
+@import 'partials/mid-menu';
 @import 'partials/gallery';
 
 // Form Styles
@@ -16,9 +16,27 @@
 @import 'partials/contact';
 
 
+.bgdivider-chairs {
+  height: 200px;
+  width: auto;
+  background: url(../assets/home-image-4.jpg) center / cover no-repeat;
+}
+
 .copyright {
   background: $clrBlack;
   color: $clrWhite;
   line-height: 4rem;
   text-align: center;
+}
+
+@media (min-width: $tablet) {
+  .bgdivider-chairs {
+    height: 300px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .bgdivider-chairs {
+    height: 400px;
+  }
 }

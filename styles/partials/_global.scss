@@ -31,6 +31,7 @@ $clrOJYellow: #f6a823;
   text-decoration: none;
   text-transform: uppercase;
   color: $clrBlack;
+  transition: all 0.2s;
   &:hover {
     color: $clrWhite;
     transition: all 0.2s;

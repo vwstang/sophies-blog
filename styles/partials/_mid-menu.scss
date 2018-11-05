@@ -1,0 +1,46 @@
+.mid-menu {
+  @extend .wrapper;
+  background: $clrWhiteShade;
+
+  &__list {
+    list-style: none;
+
+    &__item {
+      position: relative;
+    }
+
+    &__bullet {
+      position: absolute;
+      top: -0.5rem;
+      left: -6rem;
+      line-height: 4rem;
+      width: 4rem;
+      // width: 3rem;
+      // height: 3rem;
+      background: $clrOJYellow;
+      border-radius: 50%;
+      text-align: center;
+
+      // &:hover {
+      //   background: $clrBlack;
+      //   color: $clrOJYellow;
+      // }
+    }
+
+    &__link {
+      @include unified-links;
+
+      &:hover {
+        transition: all 0.2s;
+        background: $clrBlack;
+        color: $clrOJYellow;
+
+        &> .mid-menu__list__bullet {
+          transition: all 0.2s;
+          background: $clrBlack;
+          color: $clrOJYellow;
+        }
+      }
+    }
+  }
+}
