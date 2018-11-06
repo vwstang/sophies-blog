@@ -7,7 +7,45 @@
 
   &__nav {
     @include wrapper(20px, $LR-pgpad-mobile);
+    display: flex;
+    justify-content: space-between;
+    position: relative;
     background: $clrOJYellow;
+  }
+
+  &__mb-nav {
+    &__hamburger {
+      position: relative;
+      z-index: 9001; /* It's over 9000!!! */
+      font-size: 4.8rem;
+      line-height: 4.8rem;
+
+      &:hover {
+        color: $clrWhite;
+        transition: all 0.2s;
+      }
+    }
+
+    &__master-title {
+      @include unified-links();
+      @include unified-heading(4.8rem);
+      position: relative;
+      z-index: 9001; /* Also over 9000!!! */
+    }
+
+    &__list {
+      position: absolute;
+      bottom: 100vh;
+      left: 0;
+      z-index: 9000; /* It's... right at 9000... */
+      margin: 0;
+      height: 100vh;
+      width: 100vw;
+      padding: 0;
+      background: rgba(0, 0, 0, 0.5);
+      list-style: none;
+      
+    }
   }
 
   &__dt-nav {
@@ -107,6 +145,24 @@ $circle-text-origin: 52% 85%;
 @media (min-width: $tablet) {
   .hero-banner {
     height: 75vh;
+
+    &__nav {
+      display: block;
+    }
+
+    &__mb-nav {
+      &__hamburger {
+        display: none;
+      }
+
+      &__master-title {
+        display: none;
+      }
+
+      &__list {
+        display: none;
+      }
+    }
 
     &__dt-nav {  
       &__list {
