@@ -744,7 +744,8 @@ body {
 
 @media (min-width: 701px) {
   .form__input--half-width {
-    width: calc((100% - 40px) / 2); }
+    width: calc((100% - 40px) / 2);
+    /* Interpolation */ }
   .form__input:first-child {
     margin-right: 40px; } }
 

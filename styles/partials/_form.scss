@@ -44,7 +44,7 @@
   .form {
     &__input {
       &--half-width {
-        width: calc((100% - #{$margding}) / 2); // Interpolation
+        width: calc((100% - #{$margding}) / 2); /* Interpolation */
       }
 
       &:first-child {
