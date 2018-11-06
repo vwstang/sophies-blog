@@ -191,49 +191,8 @@ body {
   .hero-banner__nav {
     padding: 20px 5%;
     background: #f6a823; }
-    .hero-banner__nav__list {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      margin: 0 auto;
-      padding: 0;
-      list-style: none;
-      font-weight: bold; }
-    .hero-banner__nav__item {
-      height: 4.8rem;
-      line-height: 4.8rem;
-      margin: 0 15px; }
-    .hero-banner__nav__link {
-      text-decoration: none;
-      text-transform: uppercase;
-      color: #000;
-      -webkit-transition: all 0.2s;
-      -o-transition: all 0.2s;
-      transition: all 0.2s;
-      font-size: 2rem;
-      line-height: 4.8rem;
-      padding: 5px 5px; }
-      .hero-banner__nav__link:hover {
-        color: #fff;
-        -webkit-transition: all 0.2s;
-        -o-transition: all 0.2s;
-        transition: all 0.2s; }
-      .hero-banner__nav__link--active {
-        color: #fff; }
-      .hero-banner__nav__link--master {
-        margin: 0;
-        line-height: 4.8rem;
-        font-size: 4.8rem;
-        letter-spacing: 1px;
-        font-weight: bold;
-        text-transform: uppercase;
-        font-family: 'Lora', serif; }
+  .hero-banner__dt-nav__list {
+    display: none; }
   .hero-banner__container {
     padding: 0 5%;
     display: -webkit-box;
@@ -258,8 +217,8 @@ body {
     .hero-banner__title-container:hover > .hero-banner__circle-text {
       -webkit-animation: blink-spin 0.5s 1;
       animation: blink-spin 0.5s 1;
-      -webkit-animation-direction: alternate;
-      animation-direction: alternate; }
+      -webkit-animation-fill-mode: both;
+      animation-fill-mode: both; }
   .hero-banner__circle-text {
     position: absolute;
     bottom: 30px;
@@ -330,11 +289,54 @@ body {
 @media (min-width: 701px) {
   .hero-banner {
     height: 75vh; }
-    .hero-banner__container {
+    .hero-banner__dt-nav__list {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      margin: 0 auto;
+      padding: 0;
+      list-style: none;
+      font-weight: bold; }
+    .hero-banner__dt-nav__item {
+      height: 4.8rem;
+      line-height: 4.8rem;
+      margin: 0 15px; }
+    .hero-banner__dt-nav__link {
+      text-decoration: none;
+      text-transform: uppercase;
+      color: #000;
+      -webkit-transition: all 0.2s;
+      -o-transition: all 0.2s;
+      transition: all 0.2s;
+      font-size: 2rem;
+      line-height: 4.8rem;
+      padding: 5px 5px; }
+      .hero-banner__dt-nav__link:hover {
+        color: #fff;
+        -webkit-transition: all 0.2s;
+        -o-transition: all 0.2s;
+        transition: all 0.2s; }
+      .hero-banner__dt-nav__link--active {
+        color: #fff; }
+      .hero-banner__dt-nav__link--master {
+        margin: 0;
+        line-height: 4.8rem;
+        font-size: 4.8rem;
+        letter-spacing: 1px;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-family: 'Lora', serif; }
+    .hero-banner__dt-nav__container {
       -webkit-box-align: end;
       -ms-flex-align: end;
       align-items: flex-end; }
-    .hero-banner__title-container {
+    .hero-banner__dt-nav__title-container {
       margin-bottom: 40px; } }
 
 @media (min-width: 968px) {

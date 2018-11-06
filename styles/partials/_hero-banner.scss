@@ -13,37 +13,11 @@
   &__nav {
     @include wrapper(20px, $LR-pgpad-mobile);
     background: $clrOJYellow;
+  }
 
+  &__dt-nav {
     &__list {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: 0 auto;
-      padding: 0;
-      list-style: none;
-      font-weight: bold;
-    }
-
-    &__item {
-      height: 4.8rem;
-      line-height: 4.8rem;
-      margin: 0 15px;
-    }
-
-    &__link {
-      @include unified-links;
-      font-size: 2rem;
-      line-height: 4.8rem;
-      padding: 5px 5px;
-
-      &--active {
-        color: $clrWhite;
-      }
-
-      &--master {
-        @include unified-heading(4.8rem);
-        font-family: 'Lora', serif;
-      }
+      display: none;
     }
   }
 
@@ -73,7 +47,7 @@
 
     &:hover > .hero-banner__circle-text {
       animation: blink-spin 0.5s 1;
-      animation-direction: alternate;
+      animation-fill-mode: both;
     }
   }
 
@@ -139,12 +113,46 @@ $circle-text-origin: 52% 85%;
   .hero-banner {
     height: 75vh;
 
-    &__container {
-      align-items: flex-end;
-    }
-
-    &__title-container {
-      margin-bottom: 40px;
+    &__dt-nav {  
+      &__list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        padding: 0;
+        list-style: none;
+        font-weight: bold;
+      }
+  
+      &__item {
+        height: 4.8rem;
+        line-height: 4.8rem;
+        margin: 0 15px;
+      }
+  
+      &__link {
+        @include unified-links;
+        font-size: 2rem;
+        line-height: 4.8rem;
+        padding: 5px 5px;
+  
+        &--active {
+          color: $clrWhite;
+        }
+  
+        &--master {
+          @include unified-heading(4.8rem);
+          font-family: 'Lora', serif;
+        }
+      }
+  
+      &__container {
+        align-items: flex-end;
+      }
+  
+      &__title-container {
+        margin-bottom: 40px;
+      }
     }
   }
 }
