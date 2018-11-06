@@ -1,14 +1,15 @@
 .main-container {
-  @extend .wrapper;
+  // @extend .wrapper;
+  @include wrapper($TB-pgpad-mobile, $LR-pgpad-mobile);
   display: flex;
+  flex-direction: column;
   align-items: flex-start;
   background: $clrWhiteShade;
 }
 
 .sidebar {
-  flex: 0 0 440px;
-  margin-right: $margding;
-  // height: auto;
+  flex: 0 0 360px;
+  margin-top: $margding;
   
   &__heading {
     @include unified-heading(2.4rem);
@@ -119,5 +120,21 @@
 
   &--last {
     border-bottom: 10px solid $clrOJYellow;
+  }
+}
+
+@media (min-width: $tablet) {
+
+}
+
+@media (min-width: $desktop) {
+  .main-container {
+    @include wrapper($TB-pgpad-desktop, $LR-pgpad-desktop);
+  }
+
+  .sidebar {
+    flex-basis: 440px;
+    margin-top: 0;
+    margin-right: $margding;
   }
 }
