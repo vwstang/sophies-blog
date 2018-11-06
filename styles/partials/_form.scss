@@ -1,45 +1,59 @@
 .form {
   flex-grow: 1;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  flex-direction: row;
 
   &__input {
     position: relative;
-    height: 300px;
+    line-height: 2rem;
     margin-bottom: $margding;
     border: 0;
-    padding: $margding;
+    padding: 2rem;
+    resize: none;
 
     &::placeholder {
-      position: absolute;
-      top: 0;
-      left: 0;
+      color: $clrGrey;
+      opacity: 0.5;
+      font-style: italic;
     }
-  }
 
-  &__container {
-    display: flex;
+    &--comment {
+      min-height: 4rem + 2rem * 10;
+      min-width: 100%;
+      resize: vertical;
+    }
 
-    &__input {
-      height: 2rem;
-      width: 50%;
-      margin-bottom: $margding;
-      border: 0;
-      padding: $margding;
-
-      &:first-child {
-        margin-right: $margding;
-      }
+    &--message {
+      @extend .form__input--comment;
     }
   }
 
   &__submit {
     @extend .btn;
-    display: block;
+    // display: block;
     border: 0;
   }
 
   &--not-first {
     margin-top: $margding;
   }
+}
+
+@media (min-width: $tablet) {
+  .form {
+    &__input {
+      &--half-width {
+        width: calc((100% - #{$margding}) / 2); // Interpolation
+      }
+
+      &:first-child {
+        margin-right: $margding;
+      }
+    }
+  }
+}
+
+@media (min-width: $desktop) {
+
 }

@@ -170,15 +170,12 @@ body {
     background: #2c2c2c;
     color: #05afc1; }
 
-.wrapper, .wrapper--hero, .blog-snippet__content, .mid-menu {
+.wrapper, .blog-snippet__content, .mid-menu {
   padding: 50px 5%; }
 
 @media (min-width: 968px) {
-  .wrapper, .wrapper--hero, .blog-snippet__content, .mid-menu {
+  .wrapper, .blog-snippet__content, .mid-menu {
     padding: 100px 10%; } }
-
-.wrapper--hero {
-  padding: 10px; }
 
 .hero-banner {
   display: -webkit-box;
@@ -242,9 +239,9 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
@@ -258,14 +255,15 @@ body {
       background: url(../assets/contact-image-1.jpg) center/cover no-repeat; }
   .hero-banner__title-container {
     position: relative; }
+    .hero-banner__title-container:hover > .hero-banner__circle-text {
+      -webkit-animation: blink-spin 0.5s 1;
+      animation: blink-spin 0.5s 1;
+      -webkit-animation-direction: alternate;
+      animation-direction: alternate; }
   .hero-banner__circle-text {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 200px;
-    -webkit-transition: all 0.5s;
-    -o-transition: all 0.5s;
-    transition: all 0.5s; }
+    bottom: 30px;
+    left: -50px; }
   .hero-banner__hero-img {
     display: none; }
   .hero-banner__banner-title {
@@ -289,9 +287,55 @@ body {
     min-height: 300px;
     background: url(../assets/blog-image-1.jpg) center/cover no-repeat; }
 
+/* Extra Transform Animation */
+@-webkit-keyframes blink-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transform-origin: 52% 85%;
+    transform-origin: 52% 85%;
+    opacity: 1; }
+  50% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    -webkit-transform-origin: 52% 85%;
+    transform-origin: 52% 85%;
+    opacity: 0; }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+    -webkit-transform-origin: 52% 85%;
+    transform-origin: 52% 85%;
+    opacity: 1; } }
+@keyframes blink-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transform-origin: 52% 85%;
+    transform-origin: 52% 85%;
+    opacity: 1; }
+  50% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    -webkit-transform-origin: 52% 85%;
+    transform-origin: 52% 85%;
+    opacity: 0; }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+    -webkit-transform-origin: 52% 85%;
+    transform-origin: 52% 85%;
+    opacity: 1; } }
+
 @media (min-width: 701px) {
   .hero-banner {
-    height: 75vh; } }
+    height: 75vh; }
+    .hero-banner__container {
+      -webkit-box-align: end;
+      -ms-flex-align: end;
+      align-items: flex-end; }
+    .hero-banner__title-container {
+      margin-bottom: 40px; } }
 
 @media (min-width: 968px) {
   .hero-banner {
@@ -299,11 +343,19 @@ body {
     .hero-banner--index {
       background: #f6a823; }
     .hero-banner__container {
-      padding: 0 10%; }
+      padding: 0 10%;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
       .hero-banner__container--index {
         background: #f6a823; }
       .hero-banner__container--blog {
         background: url(../assets/blog-image-1.jpg) center/cover no-repeat; }
+    .hero-banner__title-container {
+      margin-bottom: 0; }
     .hero-banner__hero-img {
       display: block;
       position: relative;
@@ -425,7 +477,8 @@ body {
     font-size: 3.2rem;
     letter-spacing: 1px;
     font-weight: bold;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    text-align: center; }
   .blog-snippet__content__text--right-down {
     text-align: center; }
   .blog-snippet__content__text--left-up {
@@ -649,49 +702,49 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column; }
+  -ms-flex-direction: row;
+  flex-direction: row; }
   .form__input {
     position: relative;
-    height: 300px;
+    line-height: 2rem;
     margin-bottom: 40px;
     border: 0;
-    padding: 40px; }
+    padding: 2rem;
+    resize: none; }
     .form__input::-webkit-input-placeholder {
-      position: absolute;
-      top: 0;
-      left: 0; }
+      color: #4f4f4f;
+      opacity: 0.5;
+      font-style: italic; }
     .form__input:-ms-input-placeholder {
-      position: absolute;
-      top: 0;
-      left: 0; }
+      color: #4f4f4f;
+      opacity: 0.5;
+      font-style: italic; }
     .form__input::-ms-input-placeholder {
-      position: absolute;
-      top: 0;
-      left: 0; }
+      color: #4f4f4f;
+      opacity: 0.5;
+      font-style: italic; }
     .form__input::placeholder {
-      position: absolute;
-      top: 0;
-      left: 0; }
-  .form__container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex; }
-    .form__container__input {
-      height: 2rem;
-      width: 50%;
-      margin-bottom: 40px;
-      border: 0;
-      padding: 40px; }
-      .form__container__input:first-child {
-        margin-right: 40px; }
+      color: #4f4f4f;
+      opacity: 0.5;
+      font-style: italic; }
+    .form__input--comment, .form__input--message {
+      min-height: 24rem;
+      min-width: 100%;
+      resize: vertical; }
   .form__submit {
-    display: block;
     border: 0; }
   .form--not-first {
     margin-top: 40px; }
+
+@media (min-width: 701px) {
+  .form__input--half-width {
+    width: calc((100% - 40px) / 2); }
+  .form__input:first-child {
+    margin-right: 40px; } }
 
 .main-container {
   padding: 50px 5%;

@@ -18,6 +18,7 @@
 
     &__subtitle {
       @include unified-heading(3.2rem);
+      text-align: center;
     }
 
     &__text {
@@ -122,16 +123,6 @@
       &--right-down {
         padding-right: $LR-pgpad-desktop;
       }
-
-      // &__picture {
-      //   &--left-up {
-
-      //   }
-
-      //   &--right-down {
-          
-      //   }
-      // }
     }
 
     &__content {

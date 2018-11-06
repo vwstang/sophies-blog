@@ -1,7 +1,7 @@
-.wrapper--hero {
-  @extend .wrapper;
-  padding: 10px;
-}
+// .wrapper--hero {
+//   @extend .wrapper;
+//   padding: 10px;
+// }
 
 .hero-banner {
   display: flex;
@@ -50,7 +50,7 @@
   &__container {
     @include wrapper(0, $LR-pgpad-mobile);
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     position: relative;
     height: 100%;
@@ -70,15 +70,17 @@
 
   &__title-container {
     position: relative;
+
+    &:hover > .hero-banner__circle-text {
+      animation: blink-spin 0.5s 1;
+      animation-direction: alternate;
+    }
   }
 
   &__circle-text {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    // height: 200px;
-    width: 200px;
-    transition: all 0.5s;
+    bottom: 30px;
+    left: -50px;
   }
 
   &__hero-img {
@@ -91,7 +93,6 @@
     @include unified-heading(8rem);
     position: absolute;
     bottom: -40px;
-    // padding-left: $LR-pgpad-mobile;
     line-height: 9.2rem;
     font-family: 'Lora', serif;
 
@@ -100,24 +101,6 @@
       line-height: 10rem;
       position: static;
       padding-left: 0;
-
-      // &::before {
-      //   content: url(../assets/circle-text.png); // / "It's All About";
-      //   position: absolute;
-      //   bottom: 0;
-      //   left: -50px;
-      //   height: 200px;
-      //   width: 200px;
-      //   transition: all 0.5s;
-      // }
-
-      // //Trying to get a hover effect on the hero banner title to spin the before pseudo element
-      // &:hover::before {
-      //   @extend .hero-banner__banner-title--hero::before;
-      //   // opacity: 0;  - Add Keyframes so opacity 0 is at 50% and then back to 1 at 100%
-      //   transform: rotate(360deg);
-      //   transition: all 0.5s;
-      // }
     }
   }
 
@@ -128,9 +111,41 @@
   }
 }
 
+/* Extra Transform Animation */
+
+$circle-text-origin: 52% 85%;
+
+@keyframes blink-spin {
+  0% {
+    transform: rotate(0deg);
+    transform-origin: $circle-text-origin;
+    opacity: 1;
+  }
+
+  50% {
+    transform: rotate(180deg);
+    transform-origin: $circle-text-origin;
+    opacity: 0;
+  }
+
+  100% {
+    transform: rotate(360deg);
+    transform-origin: $circle-text-origin;
+    opacity: 1;
+  }
+}
+
 @media (min-width: $tablet) {
   .hero-banner {
     height: 75vh;
+
+    &__container {
+      align-items: flex-end;
+    }
+
+    &__title-container {
+      margin-bottom: 40px;
+    }
   }
 }
 
@@ -144,6 +159,8 @@
 
     &__container {
       @include wrapper (0, $LR-pgpad-desktop);
+      justify-content: space-between;
+      align-items: center;
       
       &--index {
         background: $clrOJYellow;
@@ -152,6 +169,10 @@
       &--blog {
         background: url(../assets/blog-image-1.jpg) center / cover no-repeat;
       }
+    }
+
+    &__title-container {
+      margin-bottom: 0;
     }
 
     &__hero-img {
