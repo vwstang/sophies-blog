@@ -37,6 +37,10 @@
   .about {
     align-items: flex-start;
 
+    &--larger-wrapper {
+      padding: ($TB-pgpad-desktop + 10vw) $LR-pgpad-desktop;
+    }
+
     &--with-image {
       display: flex;
       flex-direction: row;

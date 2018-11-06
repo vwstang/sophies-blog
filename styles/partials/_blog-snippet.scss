@@ -1,5 +1,5 @@
 .blog-snippet {
-  &__container {
+  &__img-container {
     position: relative;
 
     &__picture {
@@ -40,12 +40,80 @@
       flex-direction: row-reverse;
     }
 
-    &__container {
+    &__img-container {
+      position: relative;
       width: 50%;
+      
+      &--left-up {
+        top: -$TB-pgpad-mobile / 5 * 2;
+        padding-left: $LR-pgpad-mobile;
+        background: $clrRustRed;
+      }
+
+      &--right-down {
+        bottom: -$TB-pgpad-mobile / 5 * 4;
+        padding-right: $LR-pgpad-mobile;
+        background: $clrOJYellow;
+      }
 
       &__picture {
-        width: 80%;
+        position: relative;
+        height: 100%;
+        max-height: 100%;
+        width: 100%;
 
+        &--left-up {
+          bottom: $TB-pgpad-mobile / 5 * 2;
+          right: $LR-pgpad-mobile / 5 * 2;
+        }
+
+        &--right-down {
+          bottom: $TB-pgpad-mobile / 5 * 2;
+          left: -$LR-pgpad-mobile / 5 * 2;
+        }
+      }
+    }
+
+    &__content {
+      width: 50%;
+
+      &--right-down {
+        align-items: flex-start;
+        justify-content: flex-end;
+        padding-bottom: $TB-pgpad-mobile / 5 * 2; /* Set 10px for tablet */
+      }
+
+      &--left-up {
+        align-items: flex-end;
+        justify-content: flex-start;
+        padding-top: $TB-pgpad-mobile / 5 * 2;
+      }
+
+      &__text {
+        &--right-down {
+          text-align: left;
+        }
+
+        &--left-up {
+          text-align: right;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $desktop) {
+  .blog-snippet {
+    &__img-container {
+      &--left-up {
+        padding-left: $LR-pgpad-desktop;
+      }
+
+      &--right-down {
+        padding-right: $LR-pgpad-desktop;
+      }
+
+      &__picture {
         &--left-up {
 
         }
@@ -54,36 +122,28 @@
           
         }
       }
-
-      &--left-up {
-        background: $clrRustRed;
-      }
-      
-      &--right-down {
-        background: $clrOJYellow;
-      }
     }
 
     &__content {
       width: 50%;
 
+      &--right-down {
+        align-items: flex-start;
+        padding-bottom: 20px; /* Set 10px for tablet */
+      }
+
       &--left-up {
         align-items: flex-end;
       }
 
-      &--right-down {
-        align-items: flex-start;
-      }
-
       &__text {
-        &--left-up {
-          text-align: right;
-        }
-
         &--right-down {
           text-align: left;
         }
 
+        &--left-up {
+          text-align: right;
+        }
       }
     }
   }
