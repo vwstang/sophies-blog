@@ -3,6 +3,7 @@
 // Media Query Sizes
 $tablet: 701px;
 $desktop: 968px;
+$large-screen: 1180px;
 
 $margding: 40px;
 $top-bot-margding: $margding;
@@ -56,6 +57,7 @@ body {
   font-family: 'Roboto', sans-serif;
   line-height: 3.2rem;
   font-size: 2rem;
+  min-width: 320px;
 }
 
 .btn {

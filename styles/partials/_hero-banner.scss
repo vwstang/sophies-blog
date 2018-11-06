@@ -8,9 +8,10 @@
   flex-direction: column;
   position: relative;
   height: 100vh;
-  background: url(../assets/home-image-1.jpg) center / cover no-repeat;
 
   &__nav {
+    @include wrapper(20px, $LR-pgpad-mobile);
+    background: $clrOJYellow;
 
     &__list {
       display: flex;
@@ -22,10 +23,17 @@
       font-weight: bold;
     }
 
+    &__item {
+      height: 4.8rem;
+      line-height: 4.8rem;
+      margin: 0 15px;
+    }
+
     &__link {
       @include unified-links;
       font-size: 2rem;
-      padding: 20px;
+      line-height: 4.8rem;
+      padding: 5px 5px;
 
       &--active {
         color: $clrWhite;
@@ -38,8 +46,78 @@
     }
   }
 
+  &__container {
+    @include wrapper($TB-pgpad-mobile, $LR-pgpad-mobile);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    height: 100%;
+
+    &--index {
+      background: url(../assets/home-image-1.jpg) center / cover no-repeat;
+    }
+
+    &--blog {
+      background: url(../assets/blog-image-1.jpg) right / cover no-repeat;
+    }
+
+    &--contact {
+      background: url(../assets/contact-image-1.jpg) center / cover no-repeat;
+    }
+  }
+
+  &__title-container {
+    position: relative;
+  }
+
+  &__circle-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    // height: 200px;
+    width: 200px;
+    transition: all 0.5s;
+  }
+
   &__hero-img {
     display: none;
+  }
+
+
+
+  &__banner-title {
+    @include unified-heading(8rem);
+    position: absolute;
+    bottom: -40px;
+    // padding-left: $LR-pgpad-mobile;
+    line-height: 9.2rem;
+    font-family: 'Lora', serif;
+
+    &--hero {
+      font-size: 10rem;
+      line-height: 10rem;
+      position: static;
+      padding-left: 0;
+
+      // &::before {
+      //   content: url(../assets/circle-text.png); // / "It's All About";
+      //   position: absolute;
+      //   bottom: 0;
+      //   left: -50px;
+      //   height: 200px;
+      //   width: 200px;
+      //   transition: all 0.5s;
+      // }
+
+      // //Trying to get a hover effect on the hero banner title to spin the before pseudo element
+      // &:hover::before {
+      //   @extend .hero-banner__banner-title--hero::before;
+      //   // opacity: 0;  - Add Keyframes so opacity 0 is at 50% and then back to 1 at 100%
+      //   transform: rotate(360deg);
+      //   transition: all 0.5s;
+      // }
+    }
   }
 
   &__banner-img {
@@ -47,57 +125,15 @@
     min-height: 300px;
     background: url(../assets/blog-image-1.jpg) center / cover no-repeat;
   }
-
-  &__banner-title {
-    @include unified-heading(8rem);
-    position: absolute;
-    bottom: -40px;
-    padding-left: $LR-pgpad-mobile;
-    line-height: 9.2rem;
-    font-family: 'Lora', serif;
-
-    &--hero {
-      @include unified-heading(14rem);
-      font-family: 'Lora', serif;
-      position: relative;
-
-      &::before {
-        content: url(../assets/circle-text.png); // / "It's All About";
-        position: absolute;
-        bottom: 0;
-        left: -50px;
-        height: 200px;
-        width: 200px;
-        transition: all 0.5s;
-      }
-
-      //Trying to get a hover effect on the hero banner title to spin the before pseudo element
-      &:hover::before {
-        @extend .hero-banner__banner-title--hero::before;
-        // opacity: 0;  - Add Keyframes so opacity 0 is at 50% and then back to 1 at 100%
-        transform: rotate(360deg);
-        transition: all 0.5s;
-      }
-    }
-  }
-
-  &__container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    padding: 0 10%;
-  }
 }
-
-// .hero-banner__banner-title--hero:hover::before {
-//   transform: rotate(90deg);
-// }
-
 
 @media (min-width: $tablet) {
   .hero-banner {
     height: 75vh;
+
+    &__container {
+      
+    }
   }
 }
 
@@ -109,16 +145,49 @@
   .hero-banner {
     height: auto;
 
+    &--index {
+      background: $clrOJYellow;
+    }
+
+    &__container {
+      @include wrapper ($TB-pgpad-desktop, $LR-pgpad-desktop);
+      height: 60vh;
+      
+      &--index {
+        background: $clrOJYellow;
+      }
+      
+      &--blog {
+        background: url(../assets/blog-image-1.jpg) center / cover no-repeat;
+      }
+    }
+
     &__hero-img {
       display: block;
       position: relative;
-      top: 80px;
+      top: 0;
       right: 10px;
+      width: 300px;
+      height: 100%;
       box-shadow: 20px 20px #fff;
     }
 
     &__banner-title {
-      padding-left: $LR-pgpad-desktop;
+
+      &--hero {
+        line-height: 12rem;
+        font-size: 12rem;
+      }
     }
   }
+}
+
+@media (min-width: $large-screen) {
+  .hero-banner {
+    &__banner-title {
+      line-height: 14rem;
+      font-size: 14rem;
+    }
+  }
+
 }

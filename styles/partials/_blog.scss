@@ -3,7 +3,6 @@
   @include wrapper($TB-pgpad-mobile, $LR-pgpad-mobile);
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   background: $clrWhiteShade;
 }
 
@@ -130,6 +129,11 @@
 @media (min-width: $desktop) {
   .main-container {
     @include wrapper($TB-pgpad-desktop, $LR-pgpad-desktop);
+    flex-direction: row;
+    &--blog {
+      flex-direction: row-reverse;
+    }
+    align-items: flex-start;
   }
 
   .sidebar {

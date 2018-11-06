@@ -11,32 +11,34 @@
   <link rel="stylesheet" href="./styles/main.css">
 </head>
 <body>
-  <header class="hero-banner wrapper--hero">
+  <header class="hero-banner hero-banner--index"> <!-- wrapper--hero"> -->
     <nav class="hero-banner__nav">
       <ul class="hero-banner__nav__list">
-        <li> <!-- class="hero-banner__nav__item" -->
+        <li class="hero-banner__nav__item">
           <a class="hero-banner__nav__link hero-banner__nav__link--active" href="#">Home</a>
         </li>
-        <li> <!-- class="hero-banner__nav__item" -->
+        <li class="hero-banner__nav__item">
           <a class="hero-banner__nav__link" href="#about">About</a>
         </li>
-        <li> <!-- class="hero-banner__nav__item" -->
+        <li class="hero-banner__nav__item">
           <a class="hero-banner__nav__link hero-banner__nav__link--master" href="#">Sophie</a>
         </li>
-        <li> <!-- class="hero-banner__nav__item" -->
+        <li class="hero-banner__nav__item">
           <a class="hero-banner__nav__link" href="./blog.html">Blog</a>
         </li>
-        <li> <!-- class="hero-banner__nav__item" -->
+        <li class="hero-banner__nav__item">
           <a class="hero-banner__nav__link" href="./contact.html">Contact</a>
         </li>
       </ul>
-    </nav>
-    <div class="hero-banner__container">
-      <!-- <img class="hero-banner__content__circle-text" src="./assets/circle-text.png" alt="It's All About"> -->
-      <h1 class="hero-banner__banner-title--hero">Sophie</h1>
+    </nav> <!-- ./hero-banner__nav -->
+    <div class="hero-banner__container hero-banner__container--index">
+      <div class="hero-banner__title-container">
+        <img class="hero-banner__circle-text" src="./assets/circle-text.png" alt="It's All About">
+        <h1 class="hero-banner__banner-title hero-banner__banner-title--hero">Sophie</h1>
+      </div>
       <img class="hero-banner__hero-img" src="./assets/home-image-1.jpg" alt="I'm Sophie!">
     </div>
-  </header>
+  </header> <!-- /.hero-banner -->
   <main class="about about--larger-wrapper wrapper" id="about">
     <h2 class="about__subtitle">Who is Sophie?</h2>
     <p class="about__content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et risus nec orci ornare condimentum. Nam suscipit odio lorem, id vestibulum lacus tristique eu. Sed urna ex, porttitor nec iaculis at, consectetur vel turpis. Vestibulum ultricies, felis in lacinia porttitor, tortor metus convallis augue, at fermentum diam erat nec quam. Nulla facilisi.</p>

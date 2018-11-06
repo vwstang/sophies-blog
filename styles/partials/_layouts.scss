@@ -10,8 +10,8 @@ $pgpad-desktop: 100px 10%;
   padding: $TB-pgpad $LR-pgpad;
 }
 
+// To be removed when all converted to using the mixin wrapper instead.
 .wrapper {
-  // padding: $TB-pgpad-mobile $LR-pgpad-mobile;
   @include wrapper($TB-pgpad-mobile, $LR-pgpad-mobile);
 }
 
