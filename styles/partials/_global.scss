@@ -27,6 +27,7 @@ $clrOJYellow: #f6a823;
 // Mixins
 @mixin unified-heading($font-size) {
   margin: 0;
+  line-height: $font-size;
   font-size: $font-size;
   letter-spacing: 1px;
   font-weight: bold;
