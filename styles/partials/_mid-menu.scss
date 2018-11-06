@@ -1,52 +1,79 @@
 .mid-menu {
   @extend .wrapper;
+  padding-bottom: 0;
   background: $clrWhiteShade;
 
   &__list {
     list-style: none;
+    margin: 0;
+    padding: 0;
 
     &__item {
       position: relative;
+      padding-bottom: 50px;
     }
 
-    &__bullet {
-      position: absolute;
-      top: -0.5rem;
-      left: -6rem;
-      line-height: 4rem;
-      width: 4rem;
+    // &__bullet {
+    //   position: absolute;
+    //   top: -0.5rem;
+    //   left: -6rem;
+    //   line-height: 4rem;
+    //   width: 4rem;
       // width: 3rem;
       // height: 3rem;
-      background: $clrOJYellow;
-      border-radius: 50%;
-      text-align: center;
+      // background: $clrOJYellow;
+      // border-radius: 50%;
+      // text-align: center;
 
       // &:hover {
       //   background: $clrBlack;
       //   color: $clrOJYellow;
       // }
-    }
+    // }
 
     &__link {
       @include unified-links;
+      display: inline-block;
+      padding-left: 60px;
+      font-size: 2.4rem;
 
       &:hover {
         transition: all 0.2s;
-        background: $clrBlack;
         color: $clrOJYellow;
 
-        & > .mid-menu__list__bullet {
+        & > .mid-menu__list__heading--photos::before {
           transition: all 0.2s;
           background: $clrBlack;
           color: $clrOJYellow;
         }
       }
     }
+
+    &__heading {
+      margin: 0;
+      line-height: 2.4rem;
+
+      &--photos::before {
+        font-family: "Font Awesome 5 Free";
+        content: "\f03e";
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 2rem;
+      }
+    }
+
+    &__text {
+      margin-bottom: 0;
+      margin-left: 60px;
+    }
   }
 }
 
 @media (min-width: $tablet) {
   .mid-menu {
+    padding-top: $TB-pgpad-mobile + 50px;
+
     &__list {
       display: flex;
       flex-wrap: wrap;

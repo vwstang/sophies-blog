@@ -89,6 +89,16 @@
         padding-top: $TB-pgpad-mobile / 5 * 2;
       }
 
+      &__subtitle {
+        &--right-down {
+          text-align: left;
+        }
+
+        &--left-up {
+          text-align: right;
+        }
+      }
+
       &__text {
         &--right-down {
           text-align: left;
@@ -113,15 +123,15 @@
         padding-right: $LR-pgpad-desktop;
       }
 
-      &__picture {
-        &--left-up {
+      // &__picture {
+      //   &--left-up {
 
-        }
+      //   }
 
-        &--right-down {
+      //   &--right-down {
           
-        }
-      }
+      //   }
+      // }
     }
 
     &__content {
@@ -134,16 +144,6 @@
 
       &--left-up {
         align-items: flex-end;
-      }
-
-      &__text {
-        &--right-down {
-          text-align: left;
-        }
-
-        &--left-up {
-          text-align: right;
-        }
       }
     }
   }
