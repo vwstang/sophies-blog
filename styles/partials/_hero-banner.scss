@@ -8,6 +8,7 @@
   flex-direction: column;
   position: relative;
   height: 100vh;
+  min-height: 320px;
 
   &__nav {
     @include wrapper(20px, $LR-pgpad-mobile);
@@ -47,7 +48,7 @@
   }
 
   &__container {
-    @include wrapper($TB-pgpad-mobile, $LR-pgpad-mobile);
+    @include wrapper(0, $LR-pgpad-mobile);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -130,28 +131,19 @@
 @media (min-width: $tablet) {
   .hero-banner {
     height: 75vh;
-
-    &__container {
-      
-    }
   }
 }
 
 @media (min-width: $desktop) {
-  .wrapper--hero {
-    background: $clrOJYellow;
-  }
-
   .hero-banner {
-    height: auto;
+    height: 60vh;
 
     &--index {
       background: $clrOJYellow;
     }
 
     &__container {
-      @include wrapper ($TB-pgpad-desktop, $LR-pgpad-desktop);
-      height: 60vh;
+      @include wrapper (0, $LR-pgpad-desktop);
       
       &--index {
         background: $clrOJYellow;

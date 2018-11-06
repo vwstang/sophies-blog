@@ -8,7 +8,10 @@
 
 .sidebar {
   flex: 0 0 360px;
-  margin-top: $margding;
+
+  &--blog {
+    margin-top: $margding;
+  }
   
   &__heading {
     @include unified-heading(2.4rem);
@@ -26,12 +29,18 @@
       background: url(../assets/blog-image-2.jpg) center / cover no-repeat;
     }
 
-    &__link {
-      // @include unified-links;
-    }
-
     &__text {
       margin-bottom: 0;
+    }
+
+    &__link {
+      @include unified-links();
+      color: $clrDGBlue;
+      font-weight: bold;
+
+      &:hover {
+        color: $clrOJYellow;
+      }
     }
   }
 
@@ -140,5 +149,10 @@
     flex-basis: 440px;
     margin-top: 0;
     margin-right: $margding;
+    
+    &--blog {
+      position: sticky;
+      top: 0;
+    }
   }
 }

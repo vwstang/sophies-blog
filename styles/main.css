@@ -189,7 +189,8 @@ body {
   -ms-flex-direction: column;
   flex-direction: column;
   position: relative;
-  height: 100vh; }
+  height: 100vh;
+  min-height: 320px; }
   .hero-banner__nav {
     padding: 20px 5%;
     background: #f6a823; }
@@ -237,7 +238,7 @@ body {
         text-transform: uppercase;
         font-family: 'Lora', serif; }
   .hero-banner__container {
-    padding: 50px 5%;
+    padding: 0 5%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -293,15 +294,12 @@ body {
     height: 75vh; } }
 
 @media (min-width: 968px) {
-  .wrapper--hero {
-    background: #f6a823; }
   .hero-banner {
-    height: auto; }
+    height: 60vh; }
     .hero-banner--index {
       background: #f6a823; }
     .hero-banner__container {
-      padding: 100px 10%;
-      height: 60vh; }
+      padding: 0 10%; }
       .hero-banner__container--index {
         background: #f6a823; }
       .hero-banner__container--blog {
@@ -709,8 +707,9 @@ body {
 .sidebar {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 360px;
-  flex: 0 0 360px;
-  margin-top: 40px; }
+  flex: 0 0 360px; }
+  .sidebar--blog {
+    margin-top: 40px; }
   .sidebar__heading {
     margin: 0;
     line-height: 2.4rem;
@@ -729,6 +728,22 @@ body {
       background: url(../assets/blog-image-2.jpg) center/cover no-repeat; }
     .sidebar__about__text {
       margin-bottom: 0; }
+    .sidebar__about__link {
+      text-decoration: none;
+      text-transform: uppercase;
+      color: #000;
+      -webkit-transition: all 0.2s;
+      -o-transition: all 0.2s;
+      transition: all 0.2s;
+      color: #285e64;
+      font-weight: bold; }
+      .sidebar__about__link:hover {
+        color: #fff;
+        -webkit-transition: all 0.2s;
+        -o-transition: all 0.2s;
+        transition: all 0.2s; }
+      .sidebar__about__link:hover {
+        color: #f6a823; }
   .sidebar__recent-posts {
     background: #fff;
     padding: 40px 40px;
@@ -839,7 +854,11 @@ body {
     -ms-flex-preferred-size: 440px;
     flex-basis: 440px;
     margin-top: 0;
-    margin-right: 40px; } }
+    margin-right: 40px; }
+    .sidebar--blog {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0; } }
 
 .sidebar__social-media-list {
   display: -webkit-box;
