@@ -1,14 +1,8 @@
 //--Variables and Mixins--//
 
 // Media Query Sizes
-$tablet: 968px;
-$desktop: 1080px;
-
-// Margins and Padding
-$TB-pgpad-mobile: 50px;
-$LR-pgpad-mobile: 5%;
-$TB-pgpad-desktop: 100px;
-$LR-pgpad-desktop: 10%;
+$tablet: 701px;
+$desktop: 968px;
 
 $margding: 40px;
 $top-bot-margding: $margding;
@@ -64,10 +58,6 @@ body {
   font-size: 2rem;
 }
 
-.wrapper {
-  padding: $TB-pgpad-mobile $LR-pgpad-mobile;
-}
-
 .btn {
   @include unified-links;
   display: block;
@@ -83,12 +73,5 @@ body {
   &:hover {
     background: $clrBlack;
     color: $clrAccent;
-  }
-}
-
-@media (min-width: $desktop) {
-  
-  .wrapper {
-    padding: $TB-pgpad-desktop $LR-pgpad-desktop;
   }
 }

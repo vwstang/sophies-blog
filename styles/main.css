@@ -144,9 +144,6 @@ body {
   line-height: 3.2rem;
   font-size: 2rem; }
 
-.wrapper, .wrapper--hero, .blog-snippet__content, .mid-menu, .gallery, .main-container {
-  padding: 50px 5%; }
-
 .btn, .form__submit {
   text-decoration: none;
   text-transform: uppercase;
@@ -172,8 +169,11 @@ body {
     background: #2c2c2c;
     color: #05afc1; }
 
-@media (min-width: 1080px) {
-  .wrapper, .wrapper--hero, .blog-snippet__content, .mid-menu, .gallery, .main-container {
+.wrapper, .wrapper--hero, .blog-snippet__content, .mid-menu, .main-container {
+  padding: 50px 5%; }
+
+@media (min-width: 968px) {
+  .wrapper, .wrapper--hero, .blog-snippet__content, .mid-menu, .main-container {
     padding: 100px 10%; } }
 
 .wrapper--hero {
@@ -188,6 +188,7 @@ body {
   -ms-flex-direction: column;
   flex-direction: column;
   position: relative;
+  height: 100vh;
   background: url(../assets/home-image-1.jpg) center/cover no-repeat; }
   .hero-banner__nav__list {
     display: -webkit-box;
@@ -284,18 +285,24 @@ body {
     position: relative;
     padding: 0 10%; }
 
+@media (min-width: 701px) {
+  .hero-banner {
+    height: 75vh; } }
+
 @media (min-width: 968px) {
   .wrapper--hero {
     background: #f6a823; }
-  .hero-banner__hero-img {
-    display: block;
-    position: relative;
-    top: 80px;
-    right: 10px;
-    -webkit-box-shadow: 20px 20px #fff;
-    box-shadow: 20px 20px #fff; }
-  .hero-banner__banner-title {
-    padding-left: 10%; } }
+  .hero-banner {
+    height: auto; }
+    .hero-banner__hero-img {
+      display: block;
+      position: relative;
+      top: 80px;
+      right: 10px;
+      -webkit-box-shadow: 20px 20px #fff;
+      box-shadow: 20px 20px #fff; }
+    .hero-banner__banner-title {
+      padding-left: 10%; } }
 
 .about {
   display: -webkit-box;
@@ -341,13 +348,13 @@ body {
   .about__content {
     text-align: center; }
 
-@media (min-width: 968px) {
+@media (min-width: 701px) {
   .about {
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start; }
     .about--larger-wrapper {
-      padding: 140px 10%; }
+      padding: 100px 10%; }
     .about--with-image {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -369,6 +376,10 @@ body {
       margin-top: 0; }
     .about__content {
       text-align: left; } }
+
+@media (min-width: 968px) {
+  .about--larger-wrapper {
+    padding: 140px 10%; } }
 
 .blog-snippet__img-container {
   position: relative; }
@@ -402,7 +413,7 @@ body {
   .blog-snippet__content__text--left-up {
     text-align: center; }
 
-@media (min-width: 968px) {
+@media (min-width: 701px) {
   .blog-snippet {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -462,7 +473,7 @@ body {
       .blog-snippet__content__text--left-up {
         text-align: right; } }
 
-@media (min-width: 1080px) {
+@media (min-width: 968px) {
   .blog-snippet__img-container--left-up {
     padding-left: 10%; }
   .blog-snippet__img-container--right-down {
@@ -574,7 +585,7 @@ body {
       margin-bottom: 0;
       margin-left: 60px; }
 
-@media (min-width: 968px) {
+@media (min-width: 701px) {
   .mid-menu {
     padding-top: 100px; }
     .mid-menu__list {
@@ -591,13 +602,27 @@ body {
 .gallery {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between; }
+  display: flex; }
   .gallery__img {
     height: 100%;
-    width: 30%; }
+    width: 50%; }
+    .gallery__img--last {
+      display: none; }
+
+@media (min-width: 701px) {
+  .gallery {
+    padding: 50px 5%;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+    .gallery__img {
+      width: 30%; }
+      .gallery__img--last {
+        display: block; } }
+
+@media (min-width: 968px) {
+  .gallery {
+    padding: 100px 10%; } }
 
 .form {
   -webkit-box-flex: 1;
@@ -833,11 +858,11 @@ body {
   line-height: 4rem;
   text-align: center; }
 
-@media (min-width: 968px) {
+@media (min-width: 701px) {
   .bgdivider-chairs {
     height: 300px; } }
 
-@media (min-width: 1080px) {
+@media (min-width: 968px) {
   .bgdivider-chairs {
     height: 400px; } }
 

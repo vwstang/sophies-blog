@@ -1,0 +1,23 @@
+// Margins and Padding
+$TB-pgpad-mobile: 50px;
+$LR-pgpad-mobile: 5%;
+$pgpad-mobile: 50px 5%;
+$TB-pgpad-desktop: 100px;
+$LR-pgpad-desktop: 10%;
+$pgpad-desktop: 100px 10%;
+
+@mixin wrapper($TB-pgpad, $LR-pgpad) {
+  padding: $TB-pgpad $LR-pgpad;
+}
+
+.wrapper {
+  // padding: $TB-pgpad-mobile $LR-pgpad-mobile;
+  @include wrapper($TB-pgpad-mobile, $LR-pgpad-mobile);
+}
+
+@media (min-width: $desktop) {
+  
+  .wrapper {
+    padding: $TB-pgpad-desktop $LR-pgpad-desktop;
+  }
+}

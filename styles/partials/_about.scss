@@ -38,7 +38,7 @@
     align-items: flex-start;
 
     &--larger-wrapper {
-      padding: ($TB-pgpad-desktop + 40px) $LR-pgpad-desktop;
+      @include wrapper($TB-pgpad-desktop, $LR-pgpad-desktop);
     }
 
     &--with-image {
@@ -61,6 +61,14 @@
 
     &__content {
       text-align: left;
+    }
+  }
+}
+
+@media (min-width: $desktop) {
+  .about {
+    &--larger-wrapper {
+      @include wrapper(($TB-pgpad-desktop + 40px), $LR-pgpad-desktop);
     }
   }
 }
