@@ -157,7 +157,7 @@
 
     &__about {
       margin-bottom: 0;
-      margin-right: $margding;
+      margin-right: $margding / 2;
       width: 50%;
     }
 
@@ -194,14 +194,14 @@
     
     &--blog {
       flex-direction: column;
+      position: sticky;
+      top: 0;
     }
 
     &__about {
       margin-bottom: $margding / 2;
       margin-right: 0;
       width: 100%;
-      position: sticky;
-      top: 0;
     }
 
     &__recent-posts {

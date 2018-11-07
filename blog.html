@@ -54,7 +54,7 @@
   </header> <!-- /.hero-banner -->
   <main class="main-container main-container--blog">
     <section class="main-content">
-      <article class="blog-post">
+      <article class="blog-post" id="post">
         <h2 class="blog-post__title">Why I Became A Blogger</h2>
         <h4 class="blog-post__post-info">Monday October 8th, 2018 by <a class="blog-post__post-info__author" href="./index.html">Sophie Barlow</a></h4>
         <p class="blog-post__text">Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim, pulvinar lobortis nibh lacinia at. Vestibulum nec erat ut mi sollicitudin porttitor id sit amet risus. Nam tempus vel odio vitae aliquam.</p>
@@ -68,7 +68,7 @@
         <img class="comment__avatar" src="./assets/blog-image-3.jpg" alt="Jeremy's Avatar">
         <div class="comment__container">
           <h4 class="comment__author">
-            <a class="comment__author__link" href="./index.html">Tuesday October 9th, 2018 by Jeremy</a>
+            <a class="comment__author__link" href="#post-comment">Tuesday October 9th, 2018 by Jeremy</a>
           </h4>
           <p class="comment__text">Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcorper metus. Sed sollicitudin ipsum quis nunc sollicitudin ultrices. Donec euismod scelerisque ligula. Maecenas eu varius risus, eu aliquet arcu.</p>
         </div>
@@ -77,12 +77,12 @@
         <img class="comment__avatar" src="./assets/blog-image-4.jpg" alt="Julia's Avatar">
         <div class="comment__container">
           <h4 class="comment__author">
-            <a class="comment__author__link" href="./index.html">Wednesday October 10th, 2018 by Julia</a>
+            <a class="comment__author__link" href="#post-comment">Wednesday October 10th, 2018 by Julia</a>
           </h4>
           <p class="comment__text">Donec viverra eleifend lacus, vitae ullamcorper metus. Sed sollicitudin ipsum quis nunc sollicitudin ultrices. Donec euismod scelerisque ligula. Maecenas eu varius risus, eu aliquet arcu.</p>
         </div>
       </article>
-      <form class="form form--not-first" action="">
+      <form class="form form--not-first" id="post-comment" action="">
         <input class="form__input form__input--half-width" type="text" placeholder="Name">
         <input class="form__input form__input--half-width" type="text" placeholder="Email address">
         <textarea class="form__input form__input--comment" type="text" placeholder="Comment"></textarea>
@@ -100,16 +100,16 @@
         <h3 class="sidebar__heading">Recent Posts</h3>
         <ul class="sidebar__recent-posts__post-list">
           <li class="sidebar__recent-posts__list-item">
-            <a href="#" class="sidebar__recent-posts__link">Donec facilisis tortor ut</a>
+            <a href="#post" class="sidebar__recent-posts__link">Donec facilisis tortor ut</a>
           </li>
           <li class="sidebar__recent-posts__list-item">
-            <a href="#" class="sidebar__recent-posts__link">Augue lacinia at viverra</a>
+            <a href="#post" class="sidebar__recent-posts__link">Augue lacinia at viverra</a>
           </li>
           <li class="sidebar__recent-posts__list-item">
-            <a href="#" class="sidebar__recent-posts__link">Semper sed sapien metus</a>
+            <a href="#post" class="sidebar__recent-posts__link">Semper sed sapien metus</a>
           </li>
           <li class="sidebar__recent-posts__list-item">
-            <a href="#" class="sidebar__recent-posts__link">Scelerisque nec pharetra id</a>
+            <a href="#post" class="sidebar__recent-posts__link">Scelerisque nec pharetra id</a>
           </li>
         </ul>
       </section> <!-- /.sidebar__recent-posts -->

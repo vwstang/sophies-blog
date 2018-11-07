@@ -65,11 +65,13 @@
         width: 100%;
 
         &--left-up {
+          padding: 0;
           bottom: $TB-pgpad-desktop / 5;
           right: $TB-pgpad-desktop / 5;
         }
 
         &--right-down {
+          padding: 0;
           bottom: $TB-pgpad-desktop / 5;
           left: -$TB-pgpad-desktop / 5;
         }

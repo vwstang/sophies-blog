@@ -8,17 +8,6 @@ $large-screen: 1180px;
 $margding: 40px;
 $top-bot-margding: $margding;
 
-// Colors
-// $clrWhite: #fff;
-// $clrWhiteShade: #f0efed;
-// $clrGrey: #4f4f4f;
-// $clrBlack: #2c2c2c;
-// $clrTrueBlack: #000;
-// $clrRustRed: #a82706;
-// $clrAccent: #05afc1;
-// $clrDGBlue: #285e64;
-// $clrOJYellow: #f6a823;
-
 $clr-white: #fff;
 $clr-white-shade: #f0efed;
 $clr-grey: #4f4f4f;
@@ -49,15 +38,6 @@ $clr-oj-yellow: #f6a823;
     transition: all 0.2s;
   }
 }
-
-@mixin right-down() {
-  /* test */
-}
-
-@mixin left-up() {
-  /* test */
-}
-
 
 html {
   font-size: 62.5%;  
