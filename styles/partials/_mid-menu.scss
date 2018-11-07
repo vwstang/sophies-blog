@@ -15,7 +15,7 @@
 
 
 .mid-menu {
-  @extend .wrapper;
+  @include wrapper($TB-pgpad-mobile, $LR-pgpad-mobile);
   padding-bottom: 0;
   background: $clrWhiteShade;
 

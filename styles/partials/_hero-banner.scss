@@ -249,6 +249,7 @@ $circle-text-origin: 52% 85%;
 @media (min-width: $desktop) {
   .hero-banner {
     height: 70vh;
+    min-height: 520px;
 
     &--index {
       background: $clrOJYellow;

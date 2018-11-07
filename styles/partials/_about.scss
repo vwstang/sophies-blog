@@ -1,4 +1,5 @@
 .about {
+  @include wrapper($TB-pgpad-mobile, $LR-pgpad-mobile);
   display: flex;
   flex-direction: column;
   align-items: center;
