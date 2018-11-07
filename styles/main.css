@@ -170,6 +170,16 @@ body {
     background: #2c2c2c;
     color: #05afc1; }
 
+.skip-link {
+  position: absolute;
+  left: -1000px;
+  top: 5px;
+  z-index: 999;
+  background: white;
+  color: black; }
+  .skip-link:focus {
+    left: 0; }
+
 .hero-banner {
   display: -webkit-box;
   display: -ms-flexbox;
