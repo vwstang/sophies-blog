@@ -2,19 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="author" content="Vincent Tang">
+  <meta name="keywords" content="HackerYou,ProjectTwo,Sophie,HTML,CSS,FlexBox,BEM,Multi-page">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>It's All About Sophie</title>
+  <link rel="icon" href="assets/favicon.png" type="image/png">
   <link href="https://fonts.googleapis.com/css?family=Lora|Roboto" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
-    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
   <link rel="stylesheet" href="./styles/main.css">
 </head>
 <body>
   <header class="hero-banner hero-banner--index">
     <nav class="hero-banner__nav">
-      <i class="fas fa-bars hero-banner__mb-nav__hamburger"></i>
-      <a class="hero-banner__mb-nav__master-title" href="#">Sophie</a>
+      <input class="hero-banner__mb-nav__burgercheck" type="checkbox" id="hamburger-toggle" name="hamburger-toggle">
       <ul class="hero-banner__mb-nav__list">
         <li class="hero-banner__mb-nav__item">
           <a class="hero-banner__mb-nav__link hero-banner__mb-nav__link--active" href="#">Home</a>
@@ -25,10 +26,12 @@
         <li class="hero-banner__mb-nav__item">
           <a class="hero-banner__mb-nav__link" href="./blog.html">Blog</a>
         </li>
-        <li class="hero-banner__mb-nav__item">
+        <li class="hero-banner__mb-nav__item hero-banner__mb-nav__item--last">
           <a class="hero-banner__mb-nav__link" href="./contact.html">Contact</a>
         </li>
       </ul>
+      <label class="hero-banner__mb-nav__hamburger" for="hamburger-toggle"><i class="fas fa-bars"></i></label>
+      <a class="hero-banner__mb-nav__master-title" href="#">Sophie</a>
       <ul class="hero-banner__dt-nav__list">
         <li class="hero-banner__dt-nav__item">
           <a class="hero-banner__dt-nav__link hero-banner__dt-nav__link--active" href="#">Home</a>

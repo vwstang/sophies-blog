@@ -9,11 +9,50 @@
     @include wrapper(20px, $LR-pgpad-mobile);
     display: flex;
     justify-content: space-between;
+    align-items: center;
     position: relative;
+    min-height: 85px;
     background: $clrOJYellow;
   }
 
   &__mb-nav {
+    &__burgercheck {
+      display: none;
+    }
+
+    &__list {
+      position: absolute;
+      top: 0;
+      left: -100%;
+      z-index: 9000; /* It's... right at 9000... */
+      margin: 0;
+      height: 100vh;
+      min-height: 320px;
+      width: 100%;
+      padding: 85px 0 0 0;
+      background: rgba(246, 168, 35, 0.7);
+      list-style: none;
+      transition: all 0.5s;
+    }
+
+    &__item {
+      padding: 10px $LR-pgpad-mobile;
+      border-top: 1px solid $clrTrueBlack;
+
+      &--last {
+        border-bottom: 1px solid $clrTrueBlack;
+      }
+    }
+
+    &__link {
+      @include unified-links;
+      @include unified-heading(2.4rem);
+
+      &--active {
+        color: $clrWhite;
+      }
+    }
+
     &__hamburger {
       position: relative;
       z-index: 9001; /* It's over 9000!!! */
@@ -31,20 +70,7 @@
       @include unified-heading(4.8rem);
       position: relative;
       z-index: 9001; /* Also over 9000!!! */
-    }
-
-    &__list {
-      position: absolute;
-      bottom: 100vh;
-      left: 0;
-      z-index: 9000; /* It's... right at 9000... */
-      margin: 0;
-      height: 100vh;
-      width: 100vw;
-      padding: 0;
-      background: rgba(0, 0, 0, 0.5);
-      list-style: none;
-      
+      font-family: 'Lora', serif;
     }
   }
 
@@ -94,8 +120,6 @@
     display: none;
   }
 
-
-
   &__banner-title {
     @include unified-heading(8rem);
     position: absolute;
@@ -118,8 +142,12 @@
   }
 }
 
-/* Extra Transform Animation */
+/* Checkbox hack for hamburger menu */
+input#hamburger-toggle:checked + .hero-banner__mb-nav__list {
+  left: 0;
+}
 
+/* Extra Transform Animation */
 $circle-text-origin: 52% 85%;
 
 @keyframes blink-spin {
@@ -145,10 +173,6 @@ $circle-text-origin: 52% 85%;
 @media (min-width: $tablet) {
   .hero-banner {
     height: 75vh;
-
-    &__nav {
-      display: block;
-    }
 
     &__mb-nav {
       &__hamburger {
@@ -196,14 +220,15 @@ $circle-text-origin: 52% 85%;
           font-family: 'Lora', serif;
         }
       }
-  
-      &__container {
-        align-items: flex-end;
-      }
-  
-      &__title-container {
-        margin-bottom: 40px;
-      }
+    }
+
+    &__container {
+      justify-content: flex-start;
+      align-items: flex-end;
+    }
+
+    &__title-container {
+      margin-bottom: 40px;
     }
   }
 }
@@ -234,6 +259,12 @@ $circle-text-origin: 52% 85%;
       margin-bottom: 0;
     }
 
+    &__circle-text {
+      position: absolute;
+      bottom: 50px;
+      left: -50px;
+    }
+
     &__hero-img {
       display: block;
       position: relative;
@@ -245,7 +276,6 @@ $circle-text-origin: 52% 85%;
     }
 
     &__banner-title {
-
       &--hero {
         line-height: 12rem;
         font-size: 12rem;
@@ -256,10 +286,29 @@ $circle-text-origin: 52% 85%;
 
 @media (min-width: $large-screen) {
   .hero-banner {
+    &__circle-text {
+      position: absolute;
+      bottom: 70px;
+      left: -50px;
+    }
+    
     &__banner-title {
       line-height: 14rem;
       font-size: 14rem;
     }
   }
+}
 
+@media (min-height:420px) {
+  .hero-banner {
+    &__mb-nav {
+      &__item {
+        padding: 20px $LR-pgpad-mobile;
+      }
+
+      &__link {
+        @include unified-heading(3.2rem);
+      }
+    }
+  }
 }

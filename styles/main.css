@@ -196,8 +196,55 @@ body {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
     position: relative;
+    min-height: 85px;
     background: #f6a823; }
+  .hero-banner__mb-nav__burgercheck {
+    display: none; }
+  .hero-banner__mb-nav__list {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    z-index: 9000;
+    /* It's... right at 9000... */
+    margin: 0;
+    height: 100vh;
+    min-height: 320px;
+    width: 100%;
+    padding: 85px 0 0 0;
+    background: rgba(246, 168, 35, 0.7);
+    list-style: none;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s; }
+  .hero-banner__mb-nav__item {
+    padding: 10px 5%;
+    border-top: 1px solid #000; }
+    .hero-banner__mb-nav__item--last {
+      border-bottom: 1px solid #000; }
+  .hero-banner__mb-nav__link {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+    margin: 0;
+    line-height: 2.4rem;
+    font-size: 2.4rem;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-transform: uppercase; }
+    .hero-banner__mb-nav__link:hover {
+      color: #fff;
+      -webkit-transition: all 0.2s;
+      -o-transition: all 0.2s;
+      transition: all 0.2s; }
+    .hero-banner__mb-nav__link--active {
+      color: #fff; }
   .hero-banner__mb-nav__hamburger {
     position: relative;
     z-index: 9001;
@@ -224,24 +271,13 @@ body {
     text-transform: uppercase;
     position: relative;
     z-index: 9001;
-    /* Also over 9000!!! */ }
+    /* Also over 9000!!! */
+    font-family: 'Lora', serif; }
     .hero-banner__mb-nav__master-title:hover {
       color: #fff;
       -webkit-transition: all 0.2s;
       -o-transition: all 0.2s;
       transition: all 0.2s; }
-  .hero-banner__mb-nav__list {
-    position: absolute;
-    bottom: 100vh;
-    left: 0;
-    z-index: 9000;
-    /* It's... right at 9000... */
-    margin: 0;
-    height: 100vh;
-    width: 100vw;
-    padding: 0;
-    background: rgba(0, 0, 0, 0.5);
-    list-style: none; }
   .hero-banner__dt-nav__list {
     display: none; }
   .hero-banner__container {
@@ -297,6 +333,10 @@ body {
     min-height: 300px;
     background: url(../assets/blog-image-1.jpg) center/cover no-repeat; }
 
+/* Checkbox hack for hamburger menu */
+input#hamburger-toggle:checked + .hero-banner__mb-nav__list {
+  left: 0; }
+
 /* Extra Transform Animation */
 @-webkit-keyframes blink-spin {
   0% {
@@ -340,8 +380,6 @@ body {
 @media (min-width: 701px) {
   .hero-banner {
     height: 75vh; }
-    .hero-banner__nav {
-      display: block; }
     .hero-banner__mb-nav__hamburger {
       display: none; }
     .hero-banner__mb-nav__master-title {
@@ -391,11 +429,14 @@ body {
         font-weight: bold;
         text-transform: uppercase;
         font-family: 'Lora', serif; }
-    .hero-banner__dt-nav__container {
+    .hero-banner__container {
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
       -webkit-box-align: end;
       -ms-flex-align: end;
       align-items: flex-end; }
-    .hero-banner__dt-nav__title-container {
+    .hero-banner__title-container {
       margin-bottom: 40px; } }
 
 @media (min-width: 968px) {
@@ -417,6 +458,10 @@ body {
         background: url(../assets/blog-image-1.jpg) center/cover no-repeat; }
     .hero-banner__title-container {
       margin-bottom: 0; }
+    .hero-banner__circle-text {
+      position: absolute;
+      bottom: 50px;
+      left: -50px; }
     .hero-banner__hero-img {
       display: block;
       position: relative;
@@ -431,9 +476,24 @@ body {
       font-size: 12rem; } }
 
 @media (min-width: 1180px) {
+  .hero-banner__circle-text {
+    position: absolute;
+    bottom: 70px;
+    left: -50px; }
   .hero-banner__banner-title {
     line-height: 14rem;
     font-size: 14rem; } }
+
+@media (min-height: 420px) {
+  .hero-banner__mb-nav__item {
+    padding: 20px 5%; }
+  .hero-banner__mb-nav__link {
+    margin: 0;
+    line-height: 3.2rem;
+    font-size: 3.2rem;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-transform: uppercase; } }
 
 .about {
   display: -webkit-box;
