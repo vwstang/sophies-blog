@@ -32,14 +32,9 @@
 
   &__submit {
     @extend .btn;
-    // display: block;
     width: 100%;
     border: 0;
   }
-
-  // &--not-first {
-  //   margin-top: $margding;
-  // }
 }
 
 @media (min-width: $tablet) {

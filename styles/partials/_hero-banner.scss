@@ -121,7 +121,6 @@
     @include unified-heading(6rem);
     position: absolute;
     bottom: 0;
-    // line-height: 6rem;
     text-align: center;
     font-family: 'Lora', serif;
 
@@ -166,6 +165,7 @@ $circle-text-origin: 52% 85%;
   }
 }
 
+/* Media Queries */
 @media (min-width: $tablet) {
   .hero-banner {
     height: 70vh;
@@ -315,6 +315,7 @@ $circle-text-origin: 52% 85%;
   }
 }
 
+/* Hackfix for the hamburger menu when the height of the screen is too small to fit the menu, so resize the link text sizes. */
 @media (min-height:420px) {
   .hero-banner {
     &__mb-nav {

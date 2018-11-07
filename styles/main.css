@@ -377,6 +377,7 @@ input#hamburger-toggle:checked + .hero-banner__mb-nav__list {
     transform-origin: 52% 85%;
     opacity: 1; } }
 
+/* Media Queries */
 @media (min-width: 701px) {
   .hero-banner {
     height: 70vh; }
@@ -503,6 +504,7 @@ input#hamburger-toggle:checked + .hero-banner__mb-nav__list {
     line-height: 14rem;
     font-size: 14rem; } }
 
+/* Hackfix for the hamburger menu when the height of the screen is too small to fit the menu, so resize the link text sizes. */
 @media (min-height: 420px) {
   .hero-banner__mb-nav__item {
     padding: 20px 5%; }
