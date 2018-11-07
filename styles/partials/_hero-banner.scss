@@ -112,34 +112,35 @@
 
   &__circle-text {
     position: absolute;
-    bottom: 30px;
-    left: -50px;
+    bottom: 10px;
+    left: -40px;
+  }
+
+  &__banner-title {
+    @include unified-heading(6rem);
+    position: absolute;
+    bottom: 0;
+    // line-height: 6rem;
+    text-align: center;
+    font-family: 'Lora', serif;
+
+    &--hero {
+      font-size: 6rem;
+      line-height: 6rem;
+      position: static;
+      padding-left: 0;
+    }
   }
 
   &__hero-img {
     display: none;
   }
 
-  &__banner-title {
-    @include unified-heading(8rem);
-    position: absolute;
-    bottom: -40px;
-    line-height: 9.2rem;
-    font-family: 'Lora', serif;
-
-    &--hero {
-      font-size: 10rem;
-      line-height: 10rem;
-      position: static;
-      padding-left: 0;
-    }
-  }
-
-  &__banner-img {
-    height: 50vh;
-    min-height: 300px;
-    background: url(../assets/blog-image-1.jpg) center / cover no-repeat;
-  }
+  // &__banner-img {
+  //   height: 50vh;
+  //   min-height: 300px;
+  //   background: url(../assets/blog-image-1.jpg) center / cover no-repeat;
+  // }
 }
 
 /* Checkbox hack for hamburger menu */
@@ -225,10 +226,26 @@ $circle-text-origin: 52% 85%;
     &__container {
       justify-content: flex-start;
       align-items: flex-end;
+
+      &--index {
+        justify-content: center;
+      }
     }
 
     &__title-container {
-      margin-bottom: 40px;
+      margin-bottom: 60px;
+    }
+
+    &__circle-text {
+      position: absolute;
+      bottom: 30px;
+      left: -50px;
+    }
+
+    &__banner-title {
+      @include unified-heading(8rem);
+      line-height: 9.2rem;
+      bottom: -40px;
     }
   }
 }
@@ -293,8 +310,10 @@ $circle-text-origin: 52% 85%;
     }
     
     &__banner-title {
-      line-height: 14rem;
-      font-size: 14rem;
+      &--hero {
+        line-height: 14rem;
+        font-size: 14rem;
+      }
     }
   }
 }
