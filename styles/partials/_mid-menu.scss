@@ -6,7 +6,7 @@
   top: -0.5rem;
   left: 0;
   width: 4rem;
-  background: $clrOJYellow;
+  background: $clr-oj-yellow;
   border-radius: 50%;
   line-height: 4rem;
   font-size: 2rem;
@@ -17,7 +17,7 @@
 .mid-menu {
   @include wrapper($TB-pgpad-mobile, $LR-pgpad-mobile);
   padding-bottom: 0;
-  background: $clrWhiteShade;
+  background: $clr-white-shade;
 
   &__list {
     list-style: none;
@@ -29,24 +29,6 @@
       padding-bottom: 50px;
     }
 
-    // &__bullet {
-    //   position: absolute;
-    //   top: -0.5rem;
-    //   left: -6rem;
-    //   line-height: 4rem;
-    //   width: 4rem;
-      // width: 3rem;
-      // height: 3rem;
-      // background: $clrOJYellow;
-      // border-radius: 50%;
-      // text-align: center;
-
-      // &:hover {
-      //   background: $clrBlack;
-      //   color: $clrOJYellow;
-      // }
-    // }
-
     &__link {
       @include unified-links;
       display: inline-block;
@@ -54,12 +36,12 @@
 
       &:hover {
         transition: all 0.2s;
-        color: $clrOJYellow;
+        color: $clr-oj-yellow;
 
         & > .mid-menu__list__heading::before {
           transition: all 0.2s;
-          background: $clrBlack;
-          color: $clrOJYellow;
+          background: $clr-black;
+          color: $clr-oj-yellow;
         }
       }
     }

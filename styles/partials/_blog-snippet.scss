@@ -49,13 +49,13 @@
       &--left-up {
         top: -$TB-pgpad-desktop / 5;
         padding-left: calc(#{$LR-pgpad-desktop} - #{$TB-pgpad-desktop} / 5);
-        background: $clrRustRed;
+        background: $clr-rust-red;
       }
 
       &--right-down {
         bottom: -$TB-pgpad-desktop / 5 * 2;
         padding-right: calc(#{$LR-pgpad-desktop} - #{$TB-pgpad-desktop} / 5);
-        background: $clrOJYellow;
+        background: $clr-oj-yellow;
       }
 
       &__picture {

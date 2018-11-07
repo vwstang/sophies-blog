@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: $clrWhiteShade;
+  background: $clr-white-shade;
 
   & > .about__subtitle {
     margin-top: 0;
@@ -14,7 +14,7 @@
     bottom: 10px;
     right: 10px;
     margin: 30px 0;
-    box-shadow: 20px 20px $clrOJYellow;
+    box-shadow: 20px 20px $clr-oj-yellow;
   }
 
   &__container {

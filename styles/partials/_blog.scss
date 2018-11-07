@@ -2,7 +2,7 @@
   @include wrapper($TB-pgpad-mobile, $LR-pgpad-mobile);
   display: flex;
   flex-direction: column;
-  background: $clrWhiteShade;
+  background: $clr-white-shade;
 }
 
 .sidebar {
@@ -16,7 +16,7 @@
 
   &__about {
     margin-bottom: $margding / 2;
-    background: $clrWhite;
+    background: $clr-white;
     padding: $top-bot-margding $margding;
 
     &__img {
@@ -33,17 +33,17 @@
 
     &__link {
       @include unified-links();
-      color: $clrDGBlue;
+      color: $clr-dg-blue;
       font-weight: bold;
 
       &:hover {
-        color: $clrOJYellow;
+        color: $clr-oj-yellow;
       }
     }
   }
 
   &__recent-posts {
-    background: $clrWhite;
+    background: $clr-white;
     padding: $top-bot-margding $margding;
 
     &__post-list {
@@ -64,18 +64,18 @@
         top: 0;
         left: 0;
         width: 1.5rem;
-        color: $clrOJYellow;
+        color: $clr-oj-yellow;
       }
     }
     
 
     &__link {
       @include unified-links;
-      color: $clrBlack;
+      color: $clr-true-black;
       text-transform: none;
       
       &:hover {
-        color: $clrOJYellow;
+        color: $clr-oj-yellow;
       }
     }
   }
@@ -88,9 +88,9 @@
 }
 
 .blog-post {
-  background: $clrWhite;
+  background: $clr-white;
   margin-bottom: $margding;
-  border-bottom: 10px solid $clrOJYellow;
+  border-bottom: 10px solid $clr-oj-yellow;
   padding: $top-bot-margding $margding;
 
   &__title {
@@ -105,10 +105,10 @@
       @include unified-links;
       font-weight: bold;
       text-transform: none;
-      color: $clrDGBlue;
+      color: $clr-dg-blue;
 
       &:hover {
-        color: $clrOJYellow;
+        color: $clr-oj-yellow;
       }
     }
   }
@@ -120,7 +120,7 @@
 
 .comment {
   margin-bottom: $margding / 2;
-  background: $clrWhite;
+  background: $clr-white;
   padding: $top-bot-margding $margding;
 
   &__avatar {
@@ -141,7 +141,7 @@
 
   &--last {
     margin-bottom: $margding;
-    border-bottom: 10px solid $clrOJYellow;
+    border-bottom: 10px solid $clr-oj-yellow;
   }
 }
 
@@ -194,14 +194,14 @@
     
     &--blog {
       flex-direction: column;
-      position: sticky;
-      top: 0;
     }
 
     &__about {
       margin-bottom: $margding / 2;
       margin-right: 0;
       width: 100%;
+      position: sticky;
+      top: 0;
     }
 
     &__recent-posts {

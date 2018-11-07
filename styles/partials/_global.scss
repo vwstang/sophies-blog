@@ -9,15 +9,25 @@ $margding: 40px;
 $top-bot-margding: $margding;
 
 // Colors
-$clrWhite: #fff;
-$clrWhiteShade: #f0efed;
-$clrGrey: #4f4f4f;
-$clrBlack: #2c2c2c;
-$clrTrueBlack: #000;
-$clrRustRed: #a82706;
-$clrAccent: #05afc1;
-$clrDGBlue: #285e64;
-$clrOJYellow: #f6a823;
+// $clrWhite: #fff;
+// $clrWhiteShade: #f0efed;
+// $clrGrey: #4f4f4f;
+// $clrBlack: #2c2c2c;
+// $clrTrueBlack: #000;
+// $clrRustRed: #a82706;
+// $clrAccent: #05afc1;
+// $clrDGBlue: #285e64;
+// $clrOJYellow: #f6a823;
+
+$clr-white: #fff;
+$clr-white-shade: #f0efed;
+$clr-grey: #4f4f4f;
+$clr-black: #2c2c2c;
+$clr-true-black: #000;
+$clr-rust-red: #a82706;
+$clr-accent: #05afc1;
+$clr-dg-blue: #285e64;
+$clr-oj-yellow: #f6a823;
 
 // Mixins
 @mixin unified-heading($font-size) {
@@ -32,10 +42,10 @@ $clrOJYellow: #f6a823;
 @mixin unified-links() {
   text-decoration: none;
   text-transform: uppercase;
-  color: $clrTrueBlack;
+  color: $clr-true-black;
   transition: all 0.2s;
   &:hover {
-    color: $clrWhite;
+    color: $clr-white;
     transition: all 0.2s;
   }
 }
@@ -65,7 +75,7 @@ body {
   display: block;
   width: 220px;
   padding: 5px 25px;
-  background: $clrAccent;
+  background: $clr-accent;
   line-height: 3.2rem;
   letter-spacing: 1px;
   text-align: center;
@@ -73,7 +83,7 @@ body {
   transition: all 0.2s;
   
   &:hover {
-    background: $clrBlack;
-    color: $clrAccent;
+    background: $clr-black;
+    color: $clr-accent;
   }
 }

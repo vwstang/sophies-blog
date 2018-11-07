@@ -1,7 +1,7 @@
 .sidebar {
   &__contact {
     margin-bottom: $margding;
-    background: $clrWhite;
+    background: $clr-white;
     padding: $top-bot-margding $margding;
   }
 
@@ -17,10 +17,10 @@
 
     &__link { 
       @include unified-links;
-      color: $clrOJYellow;
+      color: $clr-oj-yellow;
       
       &:hover {
-        color: $clrBlack;
+        color: $clr-black;
       }
     }
   }
@@ -38,7 +38,7 @@
     &__link {
       @include unified-links;
       &:hover {
-        color: $clrOJYellow;
+        color: $clr-oj-yellow;
       }
     }
 
