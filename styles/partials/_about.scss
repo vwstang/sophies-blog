@@ -35,15 +35,12 @@
 }
 
 @media (min-width: $tablet) {
-  .about {
-    &--larger-wrapper {
-      @include wrapper($TB-pgpad-desktop, $LR-pgpad-desktop);
-    }
-  }
+
 }
 
 @media (min-width: $desktop) {
   .about {
+    @include wrapper($TB-pgpad-desktop, $LR-pgpad-desktop);
     align-items: flex-start;
 
     &--larger-wrapper {

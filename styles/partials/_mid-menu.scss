@@ -93,8 +93,6 @@
 
 @media (min-width: $tablet) {
   .mid-menu {
-    padding-top: $TB-pgpad-mobile + 50px;
-
     &__list {
       display: flex;
       flex-wrap: wrap;
@@ -107,5 +105,12 @@
         }
       }
     }
+  }
+}
+
+@media (min-width: $desktop) {
+  .mid-menu {
+    @include wrapper($TB-pgpad-desktop, $LR-pgpad-desktop);
+    padding-bottom: 50px;
   }
 }
