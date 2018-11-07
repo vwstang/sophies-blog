@@ -6,7 +6,7 @@
 
   &__input {
     position: relative;
-    margin-bottom: $margding;
+    margin-bottom: $margding / 2;
     border: 0;
     width: 100%;
     padding: 2rem;
@@ -33,28 +33,53 @@
   &__submit {
     @extend .btn;
     // display: block;
+    width: 100%;
     border: 0;
   }
 
-  &--not-first {
-    margin-top: $margding;
-  }
+  // &--not-first {
+  //   margin-top: $margding;
+  // }
 }
 
 @media (min-width: $tablet) {
   .form {
     &__input {
       &--half-width {
-        width: calc((100% - #{$margding}) / 2); /* Interpolation */
+        width: calc((100% - #{$margding} / 2) / 2); /* Interpolation */
       }
 
       &:first-child {
-        margin-right: $margding;
+        margin-right: $margding / 2;
       }
     }
   }
 }
 
 @media (min-width: $desktop) {
+  .form {
+    &__input {
+      &--half-width {
+        width: 100%;
+      }
 
+      &:first-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+@media (min-width: $large-screen) {
+  .form {
+    &__input {
+      &--half-width {
+        width: calc((100% - #{$margding} / 2) / 2); /* Interpolation */
+      }
+
+      &:first-child {
+        margin-right: $margding / 2;
+      }
+    }
+  }
 }

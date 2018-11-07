@@ -1,6 +1,8 @@
 .sidebar {
   &__contact {
-    @extend .sidebar__about;
+    margin-bottom: $margding;
+    background: $clrWhite;
+    padding: $top-bot-margding $margding;
   }
 
   &__social-media-list {

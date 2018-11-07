@@ -1,5 +1,4 @@
 .main-container {
-  // @extend .wrapper;
   @include wrapper($TB-pgpad-mobile, $LR-pgpad-mobile);
   display: flex;
   flex-direction: column;
@@ -7,8 +6,6 @@
 }
 
 .sidebar {
-  flex: 0 0 360px;
-
   &--blog {
     margin-top: $margding;
   }
@@ -18,13 +15,14 @@
   }
 
   &__about {
-    margin-bottom: $margding;
+    margin-bottom: $margding / 2;
     background: $clrWhite;
     padding: $top-bot-margding $margding;
 
     &__img {
       width: 100%;
-      height: 400px;
+      height: 40vh;
+      min-height: 300px;
       margin-bottom: $margding;
       background: url(../assets/blog-image-2.jpg) center / cover no-repeat;
     }
@@ -50,17 +48,26 @@
 
     &__post-list {
       margin-bottom: 0;
-      padding-left: 1.5rem;
+      padding-left: 1rem;;
       list-style: none; /* Turns out CSS can't target the styles of the default bullets */
     }
 
     /* So have to make pseudo-elements to replace them - source: w3schools */
-    &__list-item::before {
-      content: "\2022"; /* Unicode for a bullet */
-      display: inline-block;
-      width: 1.5rem;
-      color: $clrOJYellow;
+    &__list-item {
+      position: relative;
+      padding-left: 2rem;
+        
+      &::before {
+        content: "\2022"; /* Unicode for a bullet */
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1.5rem;
+        color: $clrOJYellow;
+      }
     }
+    
 
     &__link {
       @include unified-links;
@@ -82,6 +89,7 @@
 
 .blog-post {
   background: $clrWhite;
+  margin-bottom: $margding;
   border-bottom: 10px solid $clrOJYellow;
   padding: $top-bot-margding $margding;
 
@@ -91,9 +99,17 @@
 
   &__post-info {
     font-style: italic;
+    font-weight: normal;
 
     &__author {
       @include unified-links;
+      font-weight: bold;
+      text-transform: none;
+      color: $clrDGBlue;
+
+      &:hover {
+        color: $clrOJYellow;
+      }
     }
   }
 
@@ -103,9 +119,7 @@
 }
 
 .comment {
-  display: flex;
-  align-items: flex-start;
-  margin-top: $margding;
+  margin-bottom: $margding / 2;
   background: $clrWhite;
   padding: $top-bot-margding $margding;
 
@@ -115,7 +129,6 @@
 
   &__author {
     @extend .blog-post__post-info;
-    margin-top: 0;
 
     &__link {
       @extend .blog-post__post-info__author;
@@ -127,32 +140,78 @@
   }
 
   &--last {
+    margin-bottom: $margding;
     border-bottom: 10px solid $clrOJYellow;
   }
 }
 
 @media (min-width: $tablet) {
+  .sidebar {
+    align-items: flex-start;
+    flex: 0 0 auto;
 
+    &--blog {
+      display: flex;
+      flex-direction: row;
+    }
+
+    &__about {
+      margin-bottom: 0;
+      margin-right: $margding;
+      width: 50%;
+    }
+
+    &__recent-posts {
+      width: 50%;
+    }
+  }
+  
+  .comment {
+    display: flex;
+    align-items: flex-start;
+
+    &__author {
+      margin-top: 0;
+    }
+  }
 }
 
 @media (min-width: $desktop) {
   .main-container {
     @include wrapper($TB-pgpad-desktop, $LR-pgpad-desktop);
     flex-direction: row;
+    align-items: flex-start;
+    
     &--blog {
       flex-direction: row-reverse;
     }
-    align-items: flex-start;
   }
 
   .sidebar {
-    flex-basis: 440px;
+    flex: 0 0 320px;
     margin-top: 0;
     margin-right: $margding;
     
     &--blog {
+      flex-direction: column;
       position: sticky;
       top: 0;
     }
+
+    &__about {
+      margin-bottom: $margding / 2;
+      margin-right: 0;
+      width: 100%;
+    }
+
+    &__recent-posts {
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: $large-screen) {
+  .sidebar {
+    flex: 0 0 360px;
   }
 }
